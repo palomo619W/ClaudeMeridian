@@ -181,7 +181,7 @@
         "Tipo de proyecto: " + type + "\n\n" +
         message;
 
-      var mailto = "mailto:contacto@meridian-builders.com" +
+      var mailto = "mailto:proyectos@meridian-builders.com" +
         "?subject=" + encodeURIComponent("Nuevo contacto desde la web — " + name) +
         "&body=" + encodeURIComponent(body);
 
