@@ -1,4 +1,4 @@
-# Respuestas SIN la skill (línea base) — Asistente de Marketing
+# Respuestas SIN la skill (línea base) — Trafficker digital
 
 > Iteración 1 · 28-09-2026. Cada caso muestra el mensaje del usuario y la primera respuesta generada.
 

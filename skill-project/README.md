@@ -1,4 +1,4 @@
-# Proyecto: Skill "Asistente de Marketing"
+# Proyecto: Skill "Trafficker digital"
 
 Skill **genérica** de Claude que actúa como **trafficker digital / Senior Performance Marketing Manager** para **cualquier marca**: e-commerce, servicios, negocios locales, B2B, B2G, educación o SaaS. Primero aprende la marca con un cuestionario breve y una **ficha de marca** que se va retroalimentando. Después diseña, presupuesta, mide y optimiza campañas de Meta, TikTok y Google Ads orientadas a resultados de negocio.
 
@@ -11,7 +11,7 @@ Skill **genérica** de Claude que actúa como **trafficker digital / Senior Perf
 ## Estructura
 ```
 skill-project/
-├── asistente-de-marketing/              ← LA SKILL (carpeta que se empaqueta)
+├── trafficker-digital/              ← LA SKILL (carpeta que se empaqueta)
 │   ├── SKILL.md                         ← Rol, paso cero (conocer la marca), enrutador, principios, formatos
 │   ├── rutinas/                         ← Flujos paso a paso
 │   │   ├── 00-onboarding.md             ← Cuestionario adaptativo y creación de la ficha
@@ -36,13 +36,13 @@ skill-project/
 │   ├── scripts/                         ← verificar_perfil.py · calcular_kpis.py ·
 │   │                                       distribuir_presupuesto.py · registrar_aprendizaje.py
 │   └── evals/evals.json                 ← Casos de prueba (no se empaquetan)
-├── dist/asistente-de-marketing.skill    ← Paquete instalable
+├── dist/trafficker-digital.skill    ← Paquete instalable
 └── docs/skill_config_original.md        ← Especificación conceptual original
 ```
 
 ## Instalación
-- **Claude.ai / app:** Configuración → Capacidades → Skills → subir `dist/asistente-de-marketing.skill`.
-- **Claude Code:** copiar `asistente-de-marketing/` a `~/.claude/skills/` (o a `.claude/skills/` del proyecto).
+- **Claude.ai / app:** Configuración → Capacidades → Skills → subir `dist/trafficker-digital.skill`.
+- **Claude Code:** copiar `trafficker-digital/` a `~/.claude/skills/` (o a `.claude/skills/` del proyecto).
 
 ## Volver a empaquetar
-Desde la carpeta de scripts de skill-creator: `python -m scripts.package_skill <ruta>/asistente-de-marketing dist/`
+Desde la carpeta de scripts de skill-creator: `python -m scripts.package_skill <ruta>/trafficker-digital dist/`

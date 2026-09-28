@@ -1,4 +1,4 @@
-# Respuestas CON la skill — Asistente de Marketing
+# Respuestas CON la skill — Trafficker digital
 
 > Iteración 1 · 28-09-2026. Cada caso muestra el mensaje del usuario y la primera respuesta generada.
 

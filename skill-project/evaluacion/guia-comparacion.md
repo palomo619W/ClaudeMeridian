@@ -1,6 +1,6 @@
 # Guía para comparar respuestas CON y SIN la skill
 
-**Skill:** Asistente de Marketing · **Iteración:** 1 · **Fecha:** 28-09-2026
+**Skill:** Trafficker digital · **Iteración:** 1 · **Fecha:** 28-09-2026
 
 Esta guía te ayuda a revisar los 3 casos de prueba y a decidir qué mejorar en la skill. No necesitas conocimientos técnicos.
 
@@ -13,7 +13,7 @@ Esta guía te ayuda a revisar los 3 casos de prueba y a decidir qué mejorar en 
 | `visor-evaluacion.html` | Visor interactivo. Ábrelo en el navegador: en la pestaña **Outputs** ves cada caso lado a lado y puedes escribir comentarios; en **Benchmark** están los números. Al terminar pulsa **Submit All Reviews** y descarga `feedback.json` |
 | `guia-comparacion.md` | Este documento |
 
-Los archivos que creó la skill en cada caso (fichas de marca e historiales) están en `asistente-de-marketing-workspace/iteration-1/<caso>/with_skill/run-1/outputs/marketing/`.
+Los archivos que creó la skill en cada caso (fichas de marca e historiales) están en `trafficker-digital-workspace/iteration-1/<caso>/with_skill/run-1/outputs/marketing/`.
 
 ## 2. Cómo hacer la revisión (15-20 minutos)
 
