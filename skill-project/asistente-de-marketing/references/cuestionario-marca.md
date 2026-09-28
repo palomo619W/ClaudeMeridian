@@ -82,6 +82,11 @@ Pide en un solo mensaje, numerado y con ejemplo en cada punto:
 
 Las opciones marcadas **[adaptar]** cambian según el modelo de negocio (ronda 1) o el sector (bloque B). Los rangos de dinero están en USD como referencia: **conviértelos a la moneda local** del usuario con cifras redondas.
 
+**Omitir, adaptar o profundizar:**
+- **Omite** la pregunta si ya está respondida o se deduce con seguridad (p. ej., "tienda online en México" responde Modelo y Cobertura).
+- **Adapta** las opciones que no aplican al modelo: cámbialas por otras que sí apliquen, sin superar 4. Ejemplo: en e-commerce, Objetivo = Ventas online (Recomendado) · Mensajes de WhatsApp · Registros o suscriptores · Visitas a tienda física; nunca "Citas".
+- **Profundiza** cuando parte de la respuesta ya se conoce: pregunta el siguiente nivel con el mismo header o uno equivalente. Ejemplo: si ya sabes que el público son mujeres, pregunta su actividad o interés (gym, pilates, running, uso diario) en lugar de "Público".
+
 ### Ronda 1 — Tu negocio
 | Header | Pregunta | Tipo | Opciones (label — description) | Campo de la ficha |
 |---|---|---|---|---|
@@ -121,6 +126,8 @@ Las opciones marcadas **[adaptar]** cambian según el modelo de negocio (ronda 1
 | Registro | ¿Dónde registras tus clientes y ventas? | única | Un CRM (HubSpot, Zoho…) · Excel o Google Sheets · La tienda online · En ningún lado | CRM o registro de ventas |
 | Regulado | ¿Tu producto está en una categoría regulada? | única | No · Salud o estética · Finanzas o crédito · Otra (alcohol, vivienda, empleo, política) | Restricciones |
 | Oferta | ¿Tienes una oferta que dé razón para comprar ya? | única | Descuento o promoción · Envío gratis o regalo · Pago en cuotas o financiamiento · Ninguna por ahora | Ofertas vigentes |
+
+**Datos por confirmar:** en la ficha escribe `PENDIENTE` solo cuando el campo está vacío. Si el campo tiene información pero falta un detalle, escribe el dato y agrega "(por confirmar: …)". Así el revisor de la ficha no lo cuenta como vacío y no hay que regenerarla.
 
 **Mapeo a la ficha:** guarda la opción elegida con palabras claras (no la letra) en el campo indicado. Por ejemplo: `- **Cliente ideal (quién compra / quién decide)** [N1]: Gerentes y dueños de negocio, 35–44 y 45 o más; decide el dueño`.
 

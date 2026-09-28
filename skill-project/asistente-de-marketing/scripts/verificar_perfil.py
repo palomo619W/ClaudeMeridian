@@ -6,7 +6,8 @@ Uso:
     python3 verificar_perfil.py marketing/mi-marca/perfil-marca.docx
 
 Lee las líneas con formato `- **Campo** [N1]: valor`. Un campo está pendiente si está vacío
-o contiene PENDIENTE; si contiene SUPUESTO, está sin confirmar.
+o empieza con PENDIENTE; si contiene SUPUESTO, "por confirmar" o un PENDIENTE parcial, está completo
+pero sin confirmar.
 El número de pregunta sugerido corresponde a references/cuestionario-marca.md.
 """
 import os
@@ -42,9 +43,12 @@ def main():
     supuestos = []
     for campo, nivel, valor in campos:
         v = valor.strip()
-        if not v or "PENDIENTE" in v.upper():
+        vu = v.upper()
+        # Solo está pendiente si el campo está vacío o empieza con PENDIENTE; un dato con un detalle
+        # "PENDIENTE DE CONFIRMAR" o "(por confirmar: …)" cuenta como completo pero sin confirmar.
+        if not v or vu.startswith("PENDIENTE"):
             pendientes.setdefault(nivel, []).append(campo)
-        elif "SUPUESTO" in v.upper():
+        elif "SUPUESTO" in vu or "PENDIENTE" in vu or "POR CONFIRMAR" in vu:
             supuestos.append(campo)
 
     total = len(campos)
@@ -57,7 +61,7 @@ def main():
         for c in faltan:
             print(f"- {c}")
     if supuestos:
-        print("\n## Supuestos por confirmar")
+        print("\n## Supuestos o detalles por confirmar")
         for c in supuestos:
             print(f"- {c}")
     if pendientes.get("N1"):

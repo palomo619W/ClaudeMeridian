@@ -1,0 +1,229 @@
+[
+  {
+    "questions": [
+      {
+        "question": "¿Qué resultado quieres conseguir con los anuncios?",
+        "header": "Objetivo",
+        "multiSelect": false,
+        "options": [
+          {"label": "Ventas online (Recomendado)", "description": "Que compren directo en tu tienda; se mide en pedidos y en cuánto vendes por cada peso invertido (ROAS)"},
+          {"label": "Mensajes de WhatsApp", "description": "Que te escriban para preguntar tallas o modelos y cerrar la venta por chat"},
+          {"label": "Registros o contactos", "description": "Juntar correos o teléfonos de interesadas para venderles después"}
+        ]
+      },
+      {
+        "question": "¿Has hecho publicidad pagada antes?",
+        "header": "Experiencia",
+        "multiSelect": false,
+        "options": [
+          {"label": "Nunca", "description": "Todavía no has pagado ningún anuncio"},
+          {"label": "Solo \"Promocionar\"", "description": "Usaste el botón Promocionar de Instagram o Facebook en algunas publicaciones"},
+          {"label": "Campañas sin medir bien", "description": "Usaste el Administrador de anuncios, pero no sabes cuántas ventas trajeron"},
+          {"label": "Campañas medidas", "description": "Tienes campañas con ventas y costos registrados"}
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "question": "¿Para qué usa principalmente tu clienta la ropa Kora Active?",
+        "header": "Actividad",
+        "multiSelect": true,
+        "options": [
+          {"label": "Gym o pesas", "description": "Sentadillas, pesas y entrenamiento de fuerza"},
+          {"label": "Pilates o yoga", "description": "Clases de estudio, reformer, yoga o barre"},
+          {"label": "Correr o al aire libre", "description": "Running, caminata, entrenamiento funcional en parque"},
+          {"label": "Uso diario", "description": "La usa también para salir, trabajar desde casa o hacer pendientes (athleisure)"}
+        ]
+      },
+      {
+        "question": "¿Qué edad tiene la mayoría de tus clientas?",
+        "header": "Edad",
+        "multiSelect": true,
+        "options": [
+          {"label": "18–24", "description": "Universitarias y primeras compras"},
+          {"label": "25–34", "description": "Jóvenes profesionistas"},
+          {"label": "35–44", "description": "Profesionistas y mamás activas"},
+          {"label": "45 o más", "description": "Mujeres maduras que cuidan su salud"}
+        ]
+      },
+      {
+        "question": "¿Quién decide la compra?",
+        "header": "Decisor",
+        "multiSelect": false,
+        "options": [
+          {"label": "Ella misma", "description": "La misma mujer que la va a usar elige y paga"},
+          {"label": "Alguien que regala", "description": "Pareja, familia o amigas que la compran como regalo"},
+          {"label": "Lo consulta antes", "description": "Lo comenta con su pareja o amigas antes de pagar"}
+        ]
+      },
+      {
+        "question": "¿Cuánto tarda una clienta en decidirse a comprar?",
+        "header": "Ciclo",
+        "multiSelect": false,
+        "options": [
+          {"label": "El mismo día", "description": "Ve el producto y compra por impulso"},
+          {"label": "Unos días", "description": "Lo ve, compara, revisa tallas y regresa a comprar"},
+          {"label": "Semanas", "description": "Lo guarda y lo piensa bastante"},
+          {"label": "Espera una promoción", "description": "Casi siempre compra en Hot Sale, Buen Fin o con descuento"}
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "question": "¿Cuánto quieres invertir en anuncios al mes?",
+        "header": "Presupuesto",
+        "multiSelect": false,
+        "options": [
+          {"label": "Menos de 5,000 MXN", "description": "Alcanza para 1 campaña muy enfocada"},
+          {"label": "5,000–20,000 MXN", "description": "Alcanza para prospección, remarketing y una prueba"},
+          {"label": "20,000–60,000 MXN", "description": "Permite varias campañas y probar otra plataforma"},
+          {"label": "Más de 60,000 MXN", "description": "Estructura por línea de producto y varias plataformas"}
+        ]
+      },
+      {
+        "question": "¿Qué margen te queda por venta, aproximadamente? (lo que queda después de pagar producto, empaque, envío y comisiones)",
+        "header": "Margen",
+        "multiSelect": false,
+        "options": [
+          {"label": "Menos del 20 %", "description": "Queda poco por venta; hay que ser muy estrictas con el costo por venta"},
+          {"label": "20–40 %", "description": "Margen típico de tienda online"},
+          {"label": "40–60 %", "description": "Margen sano que permite invertir más por cliente"},
+          {"label": "Más del 60 %", "description": "Margen alto; se puede pagar más por cada venta"}
+        ]
+      },
+      {
+        "question": "¿A dónde quieres llevar a las interesadas?",
+        "header": "Canal",
+        "multiSelect": true,
+        "options": [
+          {"label": "Web o carrito (Recomendado)", "description": "Compran directo en tu Shopify; es lo más fácil de medir"},
+          {"label": "WhatsApp", "description": "Te escriben para resolver dudas de talla y cierras por chat"},
+          {"label": "Mensaje directo de IG", "description": "Te escriben por Instagram Direct"},
+          {"label": "Formulario", "description": "Dejan sus datos para que las contactes después"}
+        ]
+      },
+      {
+        "question": "¿Qué tan rápido pueden responder los mensajes?",
+        "header": "Respuesta",
+        "multiSelect": false,
+        "options": [
+          {"label": "En menos de 15 min", "description": "Hay alguien atendiendo en horario de tienda"},
+          {"label": "El mismo día", "description": "Se responde varias veces al día"},
+          {"label": "Al día siguiente", "description": "Se responde una vez al día o menos"},
+          {"label": "No hay quien atienda", "description": "Nadie puede atender mensajes por ahora"}
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "question": "¿Por qué te eligen frente a otras marcas?",
+        "header": "Diferencial",
+        "multiSelect": true,
+        "options": [
+          {"label": "Tela de calidad", "description": "No se transparenta, no se deforma, se siente premium"},
+          {"label": "Tallas inclusivas", "description": "Manejas tallas grandes que otras marcas no tienen"},
+          {"label": "Precio", "description": "Más accesible que las marcas internacionales"},
+          {"label": "Diseño y colores", "description": "Modelos, cortes o colores que no se encuentran en otro lado"}
+        ]
+      },
+      {
+        "question": "¿Qué frena más a tus clientas antes de comprar?",
+        "header": "Objeciones",
+        "multiSelect": true,
+        "options": [
+          {"label": "El precio", "description": "Les parece caro frente a leggings de tienda departamental o marketplace"},
+          {"label": "No conocen la marca", "description": "Desconfían de comprar a una marca nueva por internet"},
+          {"label": "Duda de talla o ajuste", "description": "Temen que no les quede y tener que cambiarlo"},
+          {"label": "Tiempo de entrega", "description": "Quieren recibirlo rápido"}
+        ]
+      },
+      {
+        "question": "¿Qué material tienes para los anuncios?",
+        "header": "Material",
+        "multiSelect": true,
+        "options": [
+          {"label": "Fotos profesionales", "description": "Sesión de fotos de producto o con modelos"},
+          {"label": "Videos de la marca", "description": "Reels o videos grabados por la marca"},
+          {"label": "Videos de clientas", "description": "Reseñas, videos o fotos que te mandan clientas reales"},
+          {"label": "Nada todavía", "description": "Te propongo guiones para grabar con el celular"}
+        ]
+      },
+      {
+        "question": "¿En qué plataformas quieres anunciar?",
+        "header": "Plataformas",
+        "multiSelect": true,
+        "options": [
+          {"label": "Meta (Recomendado)", "description": "Instagram y Facebook; la base para vender ropa en México"},
+          {"label": "TikTok", "description": "Video corto nativo; bueno para descubrimiento en público joven"},
+          {"label": "Google", "description": "Aparecer cuando buscan 'leggings deportivos' o en Shopping"},
+          {"label": "Pinterest", "description": "Inspiración de outfits; menor volumen en México"}
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "question": "¿Tienes conectado el píxel de Meta (o Google Analytics) a tu Shopify? El píxel es un código que le avisa a Meta quién compró después de ver tu anuncio.",
+        "header": "Píxel",
+        "multiSelect": false,
+        "options": [
+          {"label": "Sí, está conectado", "description": "Ya aparece en tu Administrador de eventos de Meta o en Analytics"},
+          {"label": "No", "description": "Nunca lo has instalado; te digo cómo hacerlo desde Shopify"},
+          {"label": "No sé / no estoy segura", "description": "Lo revisamos juntas antes de lanzar"}
+        ]
+      },
+      {
+        "question": "¿Dónde registras tus clientas y ventas?",
+        "header": "Registro",
+        "multiSelect": false,
+        "options": [
+          {"label": "En Shopify", "description": "Los pedidos quedan en el panel de tu tienda"},
+          {"label": "Excel o Google Sheets", "description": "Llevas una hoja de ventas aparte"},
+          {"label": "Un CRM", "description": "HubSpot, Zoho u otro sistema de clientes"},
+          {"label": "En ningún lado", "description": "No hay registro ordenado todavía"}
+        ]
+      },
+      {
+        "question": "¿Tus anuncios hablarían de temas regulados?",
+        "header": "Regulado",
+        "multiSelect": false,
+        "options": [
+          {"label": "No", "description": "Solo ropa deportiva, sin promesas de salud o de cambio corporal"},
+          {"label": "Salud o cuerpo", "description": "Prometes adelgazar, reducir medidas o beneficios de salud"},
+          {"label": "Otra categoría", "description": "Suplementos, crédito u otra categoría con reglas especiales"}
+        ]
+      },
+      {
+        "question": "¿Tienes una oferta que dé razón para comprar ya?",
+        "header": "Oferta",
+        "multiSelect": false,
+        "options": [
+          {"label": "Descuento o promoción", "description": "Porcentaje o precio especial por tiempo limitado"},
+          {"label": "Envío gratis o regalo", "description": "Envío sin costo desde cierto monto, o un regalo con la compra"},
+          {"label": "Meses sin intereses", "description": "Pago a plazos con tarjeta"},
+          {"label": "Ninguna por ahora", "description": "Vendes a precio normal"}
+        ]
+      }
+    ]
+  },
+  {
+    "questions": [
+      {
+        "question": "¿Genero ahora tu ficha de marca y tu primera campaña para Instagram?",
+        "header": "Confirmar",
+        "multiSelect": false,
+        "options": [
+          {"label": "Generar ahora (Recomendado)", "description": "Creo la ficha de Kora Active y el plan de campaña completo en Word y Excel, en una sola pasada"},
+          {"label": "Corregir algo antes", "description": "Me dices todo lo que quieres ajustar en un solo mensaje y vuelvo a confirmar"}
+        ]
+      }
+    ]
+  }
+]
