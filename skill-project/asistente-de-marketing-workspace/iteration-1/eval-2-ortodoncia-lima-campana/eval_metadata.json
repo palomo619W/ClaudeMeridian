@@ -1,0 +1,16 @@
+{
+  "eval_id": 2,
+  "eval_name": "eval-2-ortodoncia-lima-campana",
+  "prompt": "Quiero pautar mi servicio de ortodoncia invisible en Lima. Cobro 2500 dólares el tratamiento, tengo 800 dólares al mes para anuncios y atiendo por WhatsApp de 9 a 7.",
+  "assertions": [
+    "Incluye las 20 secciones numeradas del plan de campaña",
+    "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+    "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+    "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+    "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+    "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+    "Incluye preguntas de calificación de leads",
+    "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+    "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca"
+  ]
+}

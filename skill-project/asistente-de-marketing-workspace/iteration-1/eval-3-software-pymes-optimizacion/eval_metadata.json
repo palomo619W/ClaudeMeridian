@@ -1,0 +1,15 @@
+{
+  "eval_id": 3,
+  "eval_name": "eval-3-software-pymes-optimizacion",
+  "prompt": "Te paso los resultados de la semana pasada (resultados-semana.csv). Vendemos software de facturación a pymes y mi CPL calificado objetivo es 40 USD. ¿Qué apago y qué escalo?",
+  "assertions": [
+    "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+    "Recomienda apagar el anuncio 'Hook producto B'",
+    "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+    "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+    "Indica cuánto presupuesto mover con una cifra concreta",
+    "Propone un nuevo test que cambia una sola variable",
+    "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+    "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo"
+  ]
+}

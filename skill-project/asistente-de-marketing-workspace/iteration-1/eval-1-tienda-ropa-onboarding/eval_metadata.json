@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "eval_name": "eval-1-tienda-ropa-onboarding",
+  "prompt": "hola, tengo una tienda online de ropa deportiva para mujer en México y quiero empezar a hacer anuncios en Instagram, ¿me ayudas?",
+  "assertions": [
+    "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+    "Hace como máximo 7 preguntas en el mensaje",
+    "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+    "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+    "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+    "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+    "Aporta al menos una recomendación inicial concreta además de preguntas"
+  ]
+}

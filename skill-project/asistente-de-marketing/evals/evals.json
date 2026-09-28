@@ -1,8 +1,55 @@
 {
   "skill_name": "asistente-de-marketing",
   "evals": [
-    {"id": 1, "prompt": "hola, tengo una tienda online de ropa deportiva para mujer en México y quiero empezar a hacer anuncios en Instagram, ¿me ayudas?", "expected_output": "Onboarding: extrae lo ya dicho (e-commerce, ropa deportiva mujer, México, Instagram), confirma y pide solo el resto del Nivel 1 en un mensaje numerado con opciones (máx. 7), entrega un borrador de ficha de marca y una primera recomendación.", "files": []},
-    {"id": 2, "prompt": "Quiero pautar mi servicio de ortodoncia invisible en Lima. Cobro 2500 dólares el tratamiento, tengo 800 dólares al mes para anuncios y atiendo por WhatsApp de 9 a 7.", "expected_output": "Plan con las 20 secciones más DECISIÓN DEL TRAFFICKER, adaptado a servicio local: costo por cita como métrica, WhatsApp, categoría de salud (restricciones), presupuesto en Prospección/Remarketing/Experimentación, supuestos y preguntas para mejorar la ficha.", "files": []},
-    {"id": 3, "prompt": "Te paso los resultados de la semana pasada (assets/plantillas/resultados-campana.csv). Vendemos software de facturación a pymes y mi CPL calificado objetivo es 40 USD. ¿Qué apago y qué escalo?", "expected_output": "Reporte de optimización: qué funcionó/empeoró/por qué, tabla apagar-mantener-escalar con datos del script, movimiento de presupuesto y un nuevo test de una sola variable, registro de aprendizaje.", "files": ["assets/plantillas/resultados-campana.csv"]}
+    {
+      "id": 1,
+      "prompt": "hola, tengo una tienda online de ropa deportiva para mujer en México y quiero empezar a hacer anuncios en Instagram, ¿me ayudas?",
+      "expected_output": "Onboarding: extrae lo ya dicho (e-commerce, ropa deportiva mujer, México, Instagram), confirma y pide solo el resto del Nivel 1 en un mensaje numerado con opciones (máx. 7), entrega un borrador de ficha de marca y una primera recomendación.",
+      "files": [],
+      "assertions": [
+        "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+        "Hace como máximo 7 preguntas en el mensaje",
+        "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+        "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+        "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+        "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+        "Aporta al menos una recomendación inicial concreta además de preguntas"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Quiero pautar mi servicio de ortodoncia invisible en Lima. Cobro 2500 dólares el tratamiento, tengo 800 dólares al mes para anuncios y atiendo por WhatsApp de 9 a 7.",
+      "expected_output": "Plan con las 20 secciones más DECISIÓN DEL TRAFFICKER, adaptado a servicio local: costo por cita como métrica, WhatsApp, categoría de salud (restricciones), presupuesto en Prospección/Remarketing/Experimentación, supuestos y preguntas para mejorar la ficha.",
+      "files": [],
+      "assertions": [
+        "Incluye las 20 secciones numeradas del plan de campaña",
+        "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+        "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+        "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+        "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+        "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+        "Incluye preguntas de calificación de leads",
+        "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+        "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Te paso los resultados de la semana pasada (resultados-semana.csv). Vendemos software de facturación a pymes y mi CPL calificado objetivo es 40 USD. ¿Qué apago y qué escalo?",
+      "expected_output": "Reporte de optimización: qué funcionó/empeoró/por qué, tabla apagar-mantener-escalar con datos del script, movimiento de presupuesto y un nuevo test de una sola variable, registro de aprendizaje.",
+      "files": [
+        "assets/plantillas/resultados-campana.csv"
+      ],
+      "assertions": [
+        "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+        "Recomienda apagar el anuncio 'Hook producto B'",
+        "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+        "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+        "Indica cuánto presupuesto mover con una cifra concreta",
+        "Propone un nuevo test que cambia una sola variable",
+        "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+        "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo"
+      ]
+    }
   ]
 }
