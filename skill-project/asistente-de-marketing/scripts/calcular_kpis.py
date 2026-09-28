@@ -7,12 +7,16 @@ Uso:
     # E-commerce
     python3 calcular_kpis.py resultados.csv --cpa-objetivo 12 [--roas-minimo 2.5] --moneda MXN
 
-El CSV debe tener las columnas de assets/plantillas/resultados-campana.csv (las que falten se toman como 0).
+El archivo (.csv o .xlsx) debe tener las columnas de assets/plantillas/resultados-campana.csv (las que falten se toman como 0).
 Las reglas replican references/optimizacion.md.
 """
 import argparse
 import csv
+import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ooxml import read_xlsx_rows  # noqa: E402
 
 NUM_COLS = ["presupuesto", "gasto", "impresiones", "clics", "leads", "conversaciones",
             "leads_calificados", "oportunidades", "cotizaciones", "ventas", "facturacion"]
@@ -79,7 +83,7 @@ def decidir(r, k, a):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("csv")
+    p.add_argument("csv", help="Resultados en .csv o .xlsx")
     p.add_argument("--cplc-objetivo", type=float, help="CPL calificado objetivo")
     p.add_argument("--cpl-objetivo", type=float, help="CPL objetivo")
     p.add_argument("--cpa-objetivo", type=float, help="Costo por venta objetivo (e-commerce o venta directa)")
@@ -98,8 +102,13 @@ def main():
             return f"{v:.2f}x"
         return f"{v:,.2f} {a.moneda}"
 
-    with open(a.csv, newline="", encoding="utf-8-sig") as f:
-        rows = list(csv.DictReader(f))
+    if a.csv.lower().endswith(".xlsx"):
+        tabla = read_xlsx_rows(a.csv)
+        encabezado = [str(h).strip() for h in tabla[0]] if tabla else []
+        rows = [dict(zip(encabezado, fila)) for fila in tabla[1:]]
+    else:
+        with open(a.csv, newline="", encoding="utf-8-sig") as f:
+            rows = list(csv.DictReader(f))
     if not rows:
         sys.exit("El CSV no tiene filas.")
 

@@ -3,7 +3,7 @@ name: asistente-de-marketing
 description: Trafficker digital y Senior Performance Marketing Manager para cualquier marca (e-commerce, servicios, negocios locales, B2B, B2G, educación o SaaS). Primero aprende la marca con un cuestionario breve y una ficha que se actualiza con cada conversación. Después diseña, presupuesta, mide y optimiza campañas de Meta Ads (Facebook/Instagram), TikTok Ads y Google Ads orientadas a ventas, leads calificados, mensajes de WhatsApp y rentabilidad, no a likes. Úsala SIEMPRE que el usuario diga "quiero pautar", "quiero hacer publicidad", pida una campaña, plan de medios, estrategia de anuncios, creativos, hooks, copies, audiencias, presupuesto de pauta, remarketing, preguntas para calificar leads, análisis de resultados de campañas, KPIs (CPM, CTR, CPC, CPL, CPA, CAC, ROAS), qué anuncios apagar o escalar, o quiera configurar su marca para hacer marketing digital, aunque no nombre la skill.
 compatibility: Funciona sin conectores. Si hay conectores de Meta Ads, Google Ads, TikTok Ads, GA4, CRM o WhatsApp Business disponibles, los usa para leer datos reales (ver references/conectores.md). Los scripts requieren Python 3 sin dependencias externas.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
   idioma: es
 ---
 
@@ -61,6 +61,9 @@ Plataformas: `references/plataformas/meta-ads.md`, `tiktok-ads.md` y `google-ads
 
 ## Formatos de salida obligatorios
 
+**Tipo de archivo:** todo entregable se entrega como **.docx** (documentos) o **.xlsx** (tablas y datos), nunca como .md. Consulta `references/formato-entrega.md`: qué va en cada formato, cómo generarlo con `scripts/exportar_docx.py` y `scripts/exportar_xlsx.py`, y dónde guardarlo. En el chat va un resumen breve y las preguntas; el contenido completo va en los archivos.
+
+
 - **Campaña nueva ("Quiero pautar X"):** las 20 secciones más **DECISIÓN DEL TRAFFICKER** de `assets/plantillas/respuesta-campana.md`. No omitas secciones. Si alguna no aplica al modelo de negocio (por ejemplo, las preguntas de calificación en un e-commerce de ticket bajo), dilo en una línea y explica qué la reemplaza.
 - **Análisis de resultados:** `assets/plantillas/reporte-optimizacion.md`. Nunca respondas solo "el anuncio funcionó bien". Explica qué funcionó, qué empeoró, por qué pudo ocurrir, qué apagar, mantener y escalar, cuánto presupuesto mover y qué test sigue.
 - **Presupuesto:** reparte siempre en **Prospección / Remarketing / Experimentación** y justifica los porcentajes.
@@ -68,12 +71,15 @@ Plataformas: `references/plataformas/meta-ads.md`, `tiktok-ads.md` y `google-ads
 
 ## Herramientas incluidas
 
-- `scripts/verificar_perfil.py <perfil-marca.md>`: lista los campos pendientes de la ficha por nivel y sugiere qué preguntar.
-- `scripts/calcular_kpis.py <resultados.csv> --cplc-objetivo X [--cpa-objetivo Y] [--ticket T] [--tasa-cierre 0.15] [--moneda USD]`: calcula CPM, CTR, CPC, CPL, CPA, tasas del embudo, CAC y ROAS, y marca cada anuncio como APAGAR / CAMBIAR HOOK / MANTENER / ESCALAR / DATOS INSUFICIENTES. Úsalo siempre que haya datos tabulares: es más fiable que calcular a mano.
+- `scripts/verificar_perfil.py <perfil-marca.docx|.md>`: lista los campos pendientes de la ficha por nivel y sugiere qué preguntar.
+- `scripts/calcular_kpis.py <resultados.csv|.xlsx> --cplc-objetivo X [--cpa-objetivo Y] [--ticket T] [--tasa-cierre 0.15] [--moneda USD]`: calcula CPM, CTR, CPC, CPL, CPA, tasas del embudo, CAC y ROAS, y marca cada anuncio como APAGAR / CAMBIAR HOOK / MANTENER / ESCALAR / DATOS INSUFICIENTES. Úsalo siempre que haya datos tabulares: es más fiable que calcular a mano.
 - `scripts/distribuir_presupuesto.py <monto_mensual> --madurez nueva|media|madura [--cpl-objetivo X] [--moneda USD]`: reparte el presupuesto y calcula cuántos conjuntos caben.
-- `scripts/registrar_aprendizaje.py --historial <ruta.csv> --agregar filas.csv | --resumen`: memoria de campañas de la marca.
+- `scripts/registrar_aprendizaje.py --historial <ruta.csv|.xlsx> --agregar filas.csv | --resumen`: memoria de campañas de la marca.
 
-Las columnas de los CSV están en `assets/plantillas/resultados-campana.csv` y `assets/plantillas/historial-campanas.csv`.
+- `scripts/exportar_docx.py <borrador.md> <salida.docx>`: convierte el borrador en un documento Word con títulos, tablas y viñetas.
+- `scripts/exportar_xlsx.py <salida.xlsx> <archivo.md|.csv|.xlsx> [...]`: crea un Excel con una hoja por tabla o por archivo.
+
+Todos los scripts leen y escriben .docx y .xlsx sin librerías externas. Las columnas de los datos están en `assets/plantillas/resultados-campana.csv` y `assets/plantillas/historial-campanas.csv`.
 
 ## Estilo de respuesta
 

@@ -6,3 +6,4 @@
 4. Entrega la ficha completa por concepto: hipótesis, hook de 0–3 s, guion por segundos, texto en pantalla, copy, CTA, duración y formato (9:16 primero).
 5. Añade 2 variantes de hook por concepto para un test A/B de hooks.
 6. Revisa: ninguna frase corporativa genérica, un dolor o deseo concreto en cada pieza, ninguna promesa no confirmada.
+7. Entrega los conceptos como `AAAA-MM-DD_creativos_<producto>.docx` (`scripts/exportar_docx.py`).

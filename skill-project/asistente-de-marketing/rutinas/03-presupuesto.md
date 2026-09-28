@@ -7,3 +7,4 @@
 5. Explica **por qué** esa distribución (madurez, tamaño de las audiencias, necesidad de aprendizaje, modelo de negocio).
 6. Si el presupuesto no alcanza para todos los productos, prioriza el de mayor margen × probabilidad de venta y deja los demás para la siguiente fase.
 7. Guarda el presupuesto en la ficha.
+8. Entrega la tabla como `AAAA-MM-DD_presupuesto.xlsx` (`scripts/exportar_xlsx.py`) y explica la distribución en el chat.

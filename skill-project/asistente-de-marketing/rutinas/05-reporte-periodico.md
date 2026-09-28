@@ -8,4 +8,4 @@
 5. **Decisiones tomadas y a tomar** (apagar, mantener, escalar).
 6. **Plan del próximo periodo:** tests, presupuesto y creativos a producir.
 
-Usa `scripts/calcular_kpis.py` para las cifras y la rutina 06 para registrar los aprendizajes.
+Usa `scripts/calcular_kpis.py` para las cifras y la rutina 06 para registrar los aprendizajes. Entrega el reporte como `.docx`, con el embudo y el ranking en `.xlsx` (`references/formato-entrega.md`).

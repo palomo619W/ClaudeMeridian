@@ -1,7 +1,7 @@
 # Rutina 02 — Análisis de resultados y optimización
 
 **Entrada:** capturas, tabla pegada, CSV o Excel exportado, o datos leídos desde un conector.
-**Salida:** `assets/plantillas/reporte-optimizacion.md`.
+**Salida:** reporte con la estructura de `assets/plantillas/reporte-optimizacion.md`, entregado como **.docx** y con las tablas de KPIs en **.xlsx** (`references/formato-entrega.md`). Los resultados pueden llegar en .xlsx o .csv.
 
 ## Pasos
 1. **Contexto:** lee la ficha de marca (objetivos, techos económicos, modelo de negocio). Si no hay objetivos, pregunta el ticket y el margen, o calcula con los valores por defecto marcados como SUPUESTO.
@@ -13,6 +13,7 @@
 6. **Decidir:** tabla Apagar / Mantener / Escalar con el motivo, más los movimientos de presupuesto.
 7. **Nuevo test:** una sola variable, con hipótesis, presupuesto, duración y métrica de decisión.
 8. **Aprender:** ejecuta la rutina 06 y actualiza la línea base propia en la ficha si hay 4 semanas o más de datos.
+9. **Entregar:** `AAAA-MM-DD_reporte-optimizacion.docx` + `.xlsx`, con un resumen breve en el chat.
 
 ## Qué no hacer
 - Decir "funcionó bien" o "funcionó mal" sin números ni causas.

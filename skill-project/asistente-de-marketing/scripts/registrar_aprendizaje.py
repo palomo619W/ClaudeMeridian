@@ -5,13 +5,17 @@ Uso:
     python3 registrar_aprendizaje.py --historial marketing/mi-marca/historial-campanas.csv --agregar filas.csv
     python3 registrar_aprendizaje.py --historial marketing/mi-marca/historial-campanas.csv --resumen [--por hook]
 
-Si el historial no existe, se crea a partir de assets/plantillas/historial-campanas.csv.
+El historial y las filas a agregar pueden ser .csv o .xlsx. Si el historial no existe, se crea a
+partir de assets/plantillas/historial-campanas.csv (en el formato que indique su extensión).
 El ranking usa el CPL calificado; si no hay calificados, usa el costo por venta.
 """
 import argparse
 import csv
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ooxml import read_xlsx_rows, write_xlsx  # noqa: E402
 from collections import defaultdict
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,28 +29,54 @@ def num(v):
         return 0.0
 
 
-def leer(path):
+def campos_plantilla():
+    with open(PLANTILLA, newline="", encoding="utf-8-sig") as f:
+        return next(csv.reader(f))
+
+
+def leer_tabla(path):
+    """Devuelve (encabezado, filas como dict) de un .csv o .xlsx."""
+    if path.lower().endswith(".xlsx"):
+        tabla = read_xlsx_rows(path)
+        if not tabla:
+            return [], []
+        enc = [str(h).strip() for h in tabla[0]]
+        return enc, [dict(zip(enc, fila)) for fila in tabla[1:]]
     with open(path, newline="", encoding="utf-8-sig") as f:
-        return list(csv.DictReader(f))
+        r = csv.DictReader(f)
+        filas = list(r)
+        return list(r.fieldnames or []), filas
+
+
+def leer(path):
+    return leer_tabla(path)[1]
 
 
 def asegurar(hist):
-    if not os.path.exists(hist):
-        os.makedirs(os.path.dirname(os.path.abspath(hist)), exist_ok=True)
+    if os.path.exists(hist):
+        return
+    os.makedirs(os.path.dirname(os.path.abspath(hist)), exist_ok=True)
+    if hist.lower().endswith(".xlsx"):
+        write_xlsx(hist, [("historial", [campos_plantilla()])], title="Historial de campañas")
+    else:
         with open(PLANTILLA, encoding="utf-8") as src, open(hist, "w", encoding="utf-8") as dst:
             dst.write(src.read())
-        print(f"Historial creado: {hist}")
+    print(f"Historial creado: {hist}")
 
 
 def agregar(HIST, path):
     asegurar(HIST)
-    with open(HIST, newline="", encoding="utf-8-sig") as f:
-        campos = next(csv.reader(f))
+    campos, existentes = leer_tabla(HIST)
+    campos = campos or campos_plantilla()
     nuevas = leer(path)
-    with open(HIST, "a", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=campos, extrasaction="ignore")
-        for fila in nuevas:
-            w.writerow({c: fila.get(c, "") for c in campos})
+    if HIST.lower().endswith(".xlsx"):
+        filas = [campos] + [[f.get(c, "") for c in campos] for f in existentes + nuevas]
+        write_xlsx(HIST, [("historial", filas)], title="Historial de campañas")
+    else:
+        with open(HIST, "a", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=campos, extrasaction="ignore")
+            for fila in nuevas:
+                w.writerow({c: fila.get(c, "") for c in campos})
     print(f"{len(nuevas)} fila(s) agregadas a {HIST}")
 
 
@@ -90,8 +120,8 @@ def resumen(HIST, dimensiones):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--historial", required=True, help="Ruta al historial-campanas.csv de la marca")
-    p.add_argument("--agregar", metavar="CSV")
+    p.add_argument("--historial", required=True, help="Ruta al historial de la marca (.csv o .xlsx)")
+    p.add_argument("--agregar", metavar="ARCHIVO", help="Filas a agregar (.csv o .xlsx)")
     p.add_argument("--resumen", action="store_true")
     p.add_argument("--por", nargs="*", default=["producto", "audiencia", "hook", "formato"])
     a = p.parse_args()

@@ -9,7 +9,7 @@ PRODUCTO · AUDIENCIA · CIUDAD · CREATIVO · HOOK · COPY · FORMATO · PRESUP
 1. Cuando haya resultados cerrados de un periodo o test, arma una fila por anuncio o variante.
 2. Regístralas:
    `python3 scripts/registrar_aprendizaje.py --historial marketing/<marca>/historial-campanas.csv --agregar filas.csv`
-   Si no puedes escribir archivos, entrega las filas en formato CSV para que el usuario las pegue en su historial.
+   El historial puede ser `.csv` o `.xlsx`. Al usuario se le entrega siempre `historial-campanas.xlsx` (si mantienes un .csv de trabajo, conviértelo con `scripts/exportar_xlsx.py`). Si el usuario adjunta su historial en .xlsx, úsalo directamente con `--historial`.
 3. Asigna el **veredicto**: GANADOR / PERDEDOR / NEUTRO / INSUFICIENTE, y una línea de **aprendizaje** (p. ej. "El hook de dolor supera al de producto en mujeres de 25 a 34 años: CPA 35 % menor").
 4. Antes de cada campaña nueva, ejecuta `--resumen` para ver ganadores y perdedores por producto, audiencia, hook y formato.
 5. Una estrategia PERDEDORA no se repite sin una **nueva hipótesis** escrita que explique qué cambió.

@@ -11,7 +11,7 @@
    - Rellena la plantilla `assets/plantillas/perfil-marca.md`.
    - "No sé" → valor por defecto + (SUPUESTO).
    - Calcula los techos económicos si hay ticket y margen (sección 7).
-5. **Guarda la ficha** según `memoria-de-marca.md`: archivo en `marketing/<marca>/perfil-marca.md` si puedes escribir; si no, bloque de código para que el usuario lo guarde.
+5. **Guarda la ficha** según `memoria-de-marca.md` (copia de trabajo en `marketing/<marca>/perfil-marca.md`) y **entrégala como `perfil-marca.docx`** con `scripts/exportar_docx.py` (ver `references/formato-entrega.md`). Las preguntas del cuestionario van en el chat, no en un archivo.
 6. **Aporta valor de inmediato:** propone en 3–5 viñetas por dónde empezaría (producto a priorizar, canal, presupuesto mínimo sugerido) y pregunta si armas la primera campaña.
 7. **Niveles 2 y 3:** no los pidas todos de golpe. Pide cada pregunta cuando una rutina la necesite (ver la columna "Se necesita para"). Si el usuario elige el modo completo, pídelos en dos mensajes más.
 

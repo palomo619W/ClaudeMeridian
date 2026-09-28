@@ -3,15 +3,20 @@
 
 Uso:
     python3 verificar_perfil.py marketing/mi-marca/perfil-marca.md
+    python3 verificar_perfil.py marketing/mi-marca/perfil-marca.docx
 
 Lee las líneas con formato `- **Campo** [N1]: valor`. Un campo está pendiente si está vacío
 o contiene PENDIENTE; si contiene SUPUESTO, está sin confirmar.
 El número de pregunta sugerido corresponde a references/cuestionario-marca.md.
 """
+import os
 import re
 import sys
 
-LINEA = re.compile(r"^- \*\*(.+?)\*\* \[(N\d)\]:\s*(.*)$")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ooxml import read_docx_text  # noqa: E402
+
+LINEA = re.compile(r"^-\s+(?:\*\*)?(.+?)(?:\*\*)?\s*\[(N\d)\]:\s*(.*)$")
 NIVELES = {"N1": "Esencial (para empezar)", "N2": "Para planificar campañas", "N3": "Medición y optimización"}
 
 
@@ -19,11 +24,16 @@ def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     campos = []
-    with open(sys.argv[1], encoding="utf-8") as f:
-        for linea in f:
-            m = LINEA.match(linea.strip())
-            if m:
-                campos.append(m.groups())
+    ruta = sys.argv[1]
+    if ruta.lower().endswith(".docx"):
+        texto = read_docx_text(ruta)
+    else:
+        with open(ruta, encoding="utf-8") as f:
+            texto = f.read()
+    for linea in texto.splitlines():
+        m = LINEA.match(linea.strip())
+        if m:
+            campos.append(m.groups())
     if not campos:
         sys.exit("No encontré campos con el formato de la plantilla assets/plantillas/perfil-marca.md")
 

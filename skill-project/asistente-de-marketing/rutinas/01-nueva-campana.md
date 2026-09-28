@@ -38,6 +38,10 @@
 - Cierra con "Supuestos usados" y "Preguntas para mejorar la ficha" (máximo 3).
 - Actualiza la ficha con los datos nuevos que hayan surgido.
 
+## Paso 9 — Entrega en Word y Excel
+- Genera `AAAA-MM-DD_plan-campana_<producto>.docx` con `scripts/exportar_docx.py` y `…xlsx` con las tablas del plan usando `scripts/exportar_xlsx.py` (ver `references/formato-entrega.md`).
+- En el chat: resumen de 3 a 6 líneas (DECISIÓN DEL TRAFFICKER + archivos entregados) y las preguntas para mejorar la ficha.
+
 ## Autorrevisión antes de entregar
 - [ ] ¿Están las 20 secciones más la Decisión?
 - [ ] ¿La moneda, el país y el cliente ideal salen de la ficha, sin supuestos ocultos?
@@ -46,3 +50,4 @@
 - [ ] ¿Hay criterios numéricos para apagar y escalar, basados en los techos?
 - [ ] ¿Los copies evitan frases corporativas genéricas y promesas no confirmadas?
 - [ ] ¿La métrica principal es la métrica final del modelo de negocio?
+- [ ] ¿El plan se entregó en .docx (y sus tablas en .xlsx), sin archivos .md?
