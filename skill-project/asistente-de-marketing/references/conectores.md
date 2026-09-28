@@ -12,7 +12,7 @@ La skill funciona sin conectores: pide al usuario capturas o archivos CSV/Excel 
 | **Tienda online (Shopify, WooCommerce, VTEX, Tiendanube)** | Ventas reales y ticket | Pedidos por UTM, ingresos, recompra | Export de pedidos con UTM |
 | **CRM (HubSpot, Zoho, Pipedrive, Salesforce, Kommo, Google Sheets)** | Calidad del lead y ventas | Etapa, puntaje, valor, fuente, campaña, fecha de cierre | CSV con lead_id, campaña, etapa, valor |
 | **WhatsApp Business (Cloud API o plataforma de mensajería)** | Conversaciones y códigos de campaña | Conversaciones iniciadas, respondidas, calificadas | Conteo manual por código de campaña |
-| **Google Drive / Sheets / archivos locales** | Ficha de marca e historial | `perfil-marca.md`, `historial-campanas.csv`, briefs | Pedir que los adjunte |
+| **Google Drive / Sheets / archivos locales** | Ficha de marca e historial | `perfil-marca.docx`, `historial-campanas.xlsx`, briefs | Pedir que los adjunte |
 
 ## Cómo actuar
 1. Revisa qué conectores o herramientas de la lista existen en la sesión.

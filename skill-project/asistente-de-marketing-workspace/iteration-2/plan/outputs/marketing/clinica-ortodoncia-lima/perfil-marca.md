@@ -9,7 +9,7 @@
 - **Web y redes** [N1]: PENDIENTE
 - **Productos o servicios y producto estrella** [N1]: Ortodoncia invisible (alineadores transparentes); producto estrella: tratamiento completo de ortodoncia invisible
 - **Modelo de negocio** [N1]: Servicio de salud dental en consultorio (B2C, servicio local), con venta consultiva por WhatsApp
-- **País, ciudades o zonas y envíos** [N1]: Perú; Lima (distritos exactos que se atienden PENDIENTE)
+- **País, ciudades o zonas y envíos** [N1]: Perú; Lima Metropolitana (por confirmar los distritos prioritarios y la dirección del consultorio)
 - **Moneda** [N1]: USD (el usuario indicó dólares; confirmar si los anuncios deben mostrar soles)
 
 ## 2. Cliente
@@ -32,7 +32,7 @@
 - **Restricciones legales o de política publicitaria** [N2]: Categoría de salud: no aludir a atributos personales del usuario, no garantizar resultados, fotos de antes y después solo reales y con consentimiento, segmentación 18+ (SUPUESTO; revisar con el colegio profesional y las normas de publicidad del Perú)
 
 ## 5. Operación comercial
-- **Canal de conversión y quién atiende (horario)** [N2]: WhatsApp, de 9:00 a 19:00 (confirmado); días de atención PENDIENTE (se asume lunes a sábado, SUPUESTO); quién atiende PENDIENTE
+- **Canal de conversión y quién atiende (horario)** [N2]: WhatsApp, de 9:00 a 19:00 (confirmado); de lunes a sábado (SUPUESTO); por confirmar quién atiende
 - **Plataformas publicitarias activas** [N2]: Meta (SUPUESTO)
 - **Material creativo disponible** [N2]: PENDIENTE (se asumen guiones grabables con el celular en el consultorio)
 

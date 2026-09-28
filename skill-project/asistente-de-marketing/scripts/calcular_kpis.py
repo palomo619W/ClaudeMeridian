@@ -16,7 +16,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ooxml import read_xlsx_rows  # noqa: E402
+from ooxml import read_xlsx_rows, write_xlsx  # noqa: E402
 
 NUM_COLS = ["presupuesto", "gasto", "impresiones", "clics", "leads", "conversaciones",
             "leads_calificados", "oportunidades", "cotizaciones", "ventas", "facturacion"]
@@ -91,6 +91,7 @@ def main():
     p.add_argument("--ticket", type=float, help="Valor promedio de venta, para estimar el ROAS potencial")
     p.add_argument("--tasa-cierre", type=float, default=0.15, help="Oportunidad -> venta (por defecto 0.15)")
     p.add_argument("--moneda", default="USD")
+    p.add_argument("--xlsx", metavar="SALIDA", help="Guarda también la tabla de KPIs por anuncio en un .xlsx")
     a = p.parse_args()
 
     def fmt(key, v):
@@ -119,6 +120,7 @@ def main():
         show = ["CPM", "CTR", "CPC", "CPL", "%Calif", "CPLc", "Costo/opor", "CPA", "ROAS"]
     print("| Anuncio | Gasto | Leads | Calif. | Ventas | " + " | ".join(show) + " | Decisión | Motivo |")
     print("|" + "---|" * (len(show) + 7))
+    hoja = [["Anuncio", "Gasto", "Leads", "Calificados", "Ventas"] + show + ["Decisión", "Motivo"]]
     for raw in rows:
         r = {c: num(raw.get(c, 0)) for c in NUM_COLS}
         for c in NUM_COLS:
@@ -128,6 +130,8 @@ def main():
         nombre = raw.get("anuncio") or raw.get("conjunto") or raw.get("campana") or "?"
         print(f"| {nombre} | {fmt('g', r['gasto'])} | {k['_contactos']:.0f} | {r['leads_calificados']:.0f} | "
               f"{r['ventas']:.0f} | " + " | ".join(fmt(s, k[s]) for s in show) + f" | **{dec}** | {motivo} |")
+        hoja.append([nombre, round(r["gasto"], 2), k["_contactos"], r["leads_calificados"], r["ventas"]]
+                    + [("" if k[s] is None else round(k[s], 4)) for s in show] + [dec, motivo])
 
     k = kpis(total)
     print("\n## Totales")
@@ -142,6 +146,13 @@ def main():
         potencial = total["oportunidades"] * a.tasa_cierre * a.ticket / total["gasto"]
         print(f"- ROAS potencial estimado ({a.tasa_cierre:.0%} de cierre de oportunidades, "
               f"ticket {a.ticket:,.0f} {a.moneda}): {potencial:.2f}x")
+    if a.xlsx:
+        totales = [["KPI", "Valor"]] + [[key, ("" if k[key] is None else round(k[key], 4))] for key in
+                                        ["CPM", "CTR", "CPC", "CPL", "Costo/conv", "%Calif", "Calif->Opor",
+                                         "Opor->Cot", "Cot->Venta", "CPLc", "Costo/opor", "CPA", "ROAS"]]
+        totales += [["Gasto total", round(total["gasto"], 2)], ["Moneda", a.moneda]]
+        write_xlsx(a.xlsx, [("KPIs por anuncio", hoja), ("Totales", totales)], title="KPIs")
+        print(f"\nKPIs guardados en {a.xlsx} (tasas como fracción: 0.013 = 1,3 %)")
 
 
 if __name__ == "__main__":

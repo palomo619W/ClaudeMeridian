@@ -21,8 +21,9 @@ NIVELES = {"N1": "Esencial (para empezar)", "N2": "Para planificar campañas", "
 
 
 def main():
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
+    if len(sys.argv) != 2 or sys.argv[1] in ("-h", "--help"):
+        print(__doc__)
+        sys.exit(0 if len(sys.argv) == 2 else 1)
     campos = []
     ruta = sys.argv[1]
     if ruta.lower().endswith(".docx"):

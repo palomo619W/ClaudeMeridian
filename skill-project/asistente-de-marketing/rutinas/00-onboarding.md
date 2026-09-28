@@ -1,7 +1,7 @@
 # Rutina 00 — Onboarding: conocer la marca y crear su ficha
 
 **Cuándo:** no existe la ficha de la marca, el usuario quiere configurar o actualizar su marca, o empieza con una marca nueva.
-**Resultado:** ficha `perfil-marca.md` con al menos el Nivel 1 completo, y una primera recomendación de valor.
+**Resultado:** ficha `perfil-marca.docx` con al menos el Nivel 1 completo, y una primera recomendación de valor.
 
 ## Pasos
 1. **Busca una ficha existente** (`references/memoria-de-marca.md`). Si la hay, salta al paso 6.
@@ -11,12 +11,12 @@
    - Rellena la plantilla `assets/plantillas/perfil-marca.md`.
    - "No sé" → valor por defecto + (SUPUESTO).
    - Calcula los techos económicos si hay ticket y margen (sección 7).
-5. **Guarda la ficha** según `memoria-de-marca.md` (copia de trabajo en `marketing/<marca>/perfil-marca.md`) y **entrégala como `perfil-marca.docx`** con `scripts/exportar_docx.py` (ver `references/formato-entrega.md`). Las preguntas del cuestionario van en el chat, no en un archivo.
+5. **Guarda la ficha** como `marketing/<marca>/perfil-marca.docx` con `scripts/exportar_docx.py` (ver `references/formato-entrega.md`). Las preguntas del cuestionario van en el chat, no en un archivo.
 6. **Aporta valor de inmediato:** propone en 3–5 viñetas por dónde empezaría (producto a priorizar, canal, presupuesto mínimo sugerido) y pregunta si armas la primera campaña.
 7. **Niveles 2 y 3:** no los pidas todos de golpe. Pide cada pregunta cuando una rutina la necesite (ver la columna "Se necesita para"). Si el usuario elige el modo completo, pídelos en dos mensajes más.
 
 ## Actualizar una ficha existente
-- Ejecuta `python3 scripts/verificar_perfil.py <ruta>/perfil-marca.md` para ver los pendientes por nivel.
+- Ejecuta `python3 scripts/verificar_perfil.py <ruta>/perfil-marca.docx` para ver los pendientes por nivel.
 - Pregunta solo los 3–5 pendientes de mayor impacto para la tarea actual.
 - Registra cada cambio con la fecha en "Registro de cambios".
 
