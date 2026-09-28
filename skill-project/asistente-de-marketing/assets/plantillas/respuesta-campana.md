@@ -1,12 +1,12 @@
-# Plan de campaña — [PRODUCTO] · Miral Autobuses
+# Plan de campaña — [PRODUCTO] · [MARCA]
 
 > Supuestos usados: [lista breve, o "ninguno"]
 
 ## 1. Objetivo comercial
-Meta de negocio medible (p. ej. "8 oportunidades calificadas y 2 cotizaciones formales de bus escolar en 30 días en Pichincha"), con los techos económicos: CAC máximo, costo máximo por oportunidad, CPLc máximo y CPL máximo.
+Meta de negocio medible y con plazo (p. ej. "40 ventas online con ROAS ≥ 3 en 30 días" o "10 oportunidades calificadas en 30 días en [zona]"), con los techos económicos de la ficha: CAC o CPA máximo y, si aplica, costo máximo por oportunidad, CPLc máximo y CPL máximo.
 
 ## 2. Cliente ideal
-Segmento, decisor, tamaño de la flota, zona, dolor, disparador de compra y objeciones.
+Segmento, quién compra y quién decide, zona, dolor o deseo, disparador de compra y objeciones.
 
 ## 3. Oferta
 Propuesta concreta + razón para actuar ahora + prueba que la respalda.
@@ -22,7 +22,7 @@ TOFU / MOFU / BOFU: qué contenido, objetivo de plataforma y métrica guía en c
 Amplias vs. segmentadas, intereses agrupados, remarketing, lookalikes (si aplica) y exclusiones.
 
 ## 7. Presupuesto diario/mensual
-| Bolsa | % | USD/mes | USD/día | Justificación |
+| Bolsa | % | [Moneda]/mes | [Moneda]/día | Justificación |
 |---|---|---|---|---|
 | Prospección | | | | |
 | Remarketing | | | | |
@@ -41,10 +41,10 @@ Texto principal y título por concepto, con el filtro de audiencia.
 Botón + frase final por etapa.
 
 ## 12. Formulario / WhatsApp / landing recomendado
-Canal elegido por campaña y por qué. Mensaje prellenado de WhatsApp con código de campaña.
+Canal elegido por campaña y por qué, según el modelo de negocio y la capacidad de atención. Mensaje prellenado de WhatsApp con código de campaña, si aplica.
 
 ## 13. Preguntas de calificación
-4–5 preguntas con opciones y regla de puntaje.
+4–5 preguntas con opciones y regla de puntaje. En e-commerce: indicar que la compra es la conversión y qué eventos se miden en su lugar.
 
 ## 14. KPIs
 | KPI | Objetivo | Alerta | Fuente |
@@ -64,7 +64,7 @@ Umbrales numéricos y ritmo de subida.
 Audiencias, ventanas, mensajes por etapa y frecuencia.
 
 ## 19. Cómo medir las ventas originadas por publicidad
-UTMs, códigos de WhatsApp, campos del CRM, eventos offline y análisis por cohortes.
+UTMs, píxel y API de conversiones, códigos de WhatsApp, campos del CRM o la tienda, eventos offline y análisis por cohortes.
 
 ## 20. Acciones para los siguientes 7, 14 y 30 días
 | Plazo | Acciones | Responsable | Entregable |
@@ -81,4 +81,6 @@ UTMs, códigos de WhatsApp, campos del CRM, eventos offline y análisis por coho
 
 **Lo que NO lanzo todavía y por qué:** …
 
-**Preguntas pendientes para el equipo de Miral:** …
+**Supuestos usados:** …
+
+**Preguntas para mejorar la ficha (máx. 3):** …

@@ -1,7 +1,8 @@
 # Brief creativo — [Concepto]
 
 - **Producto:**
-- **Segmento / decisor:**
+- **Marca:**
+- **Cliente ideal / decisor:**
 - **Etapa del funnel:**
 - **Hipótesis:**
 - **Hook (0–3 s):** frase + imagen
@@ -14,5 +15,5 @@
 - **Copy:**
 - **CTA:**
 - **Duración / formato:** 9:16 · 4:5 · 1:1
-- **Material necesario:** tomas de la planta, unidad entregada, testimonio, locución
+- **Material necesario:** producto en uso, detrás de cámaras, testimonio, UGC, locución
 - **Restricciones:** datos no confirmados que NO deben aparecer

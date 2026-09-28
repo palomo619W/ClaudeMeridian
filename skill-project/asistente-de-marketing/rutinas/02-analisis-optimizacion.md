@@ -4,15 +4,15 @@
 **Salida:** `assets/plantillas/reporte-optimizacion.md`.
 
 ## Pasos
-1. **Obtener los datos.** Si hay conector (`references/conectores.md`), lee el periodo actual y el anterior equivalente. Si no, pide la exportación con las columnas de `assets/plantillas/resultados-campana.csv`. Pide también los datos del CRM: leads calificados, oportunidades, cotizaciones, ventas y facturación.
-2. **Normalizar.** Convierte los datos al formato CSV de la plantilla y ejecuta:
-   `python3 scripts/calcular_kpis.py resultados.csv --cplc-objetivo <X> [--cpl-objetivo <Y>] [--ticket <T>]`
-   Si no hay un objetivo definido, derívalo con `references/metodologia.md` (techos económicos).
-3. **Comparar** contra el periodo anterior, el historial (`data/historial-campanas.csv`) y `references/lineas-base.md`.
-4. **Diagnosticar** con el protocolo de 7 puntos de `references/optimizacion.md`, empezando por las métricas de negocio y bajando hasta las de plataforma.
-5. **Decidir:** tabla Apagar / Mantener / Escalar con el motivo, más los movimientos de presupuesto en USD.
-6. **Nuevo test:** una sola variable, con hipótesis, presupuesto, duración y métrica de decisión.
-7. **Aprender:** invoca la rutina 06 para registrar los resultados.
+1. **Contexto:** lee la ficha de marca (objetivos, techos económicos, modelo de negocio). Si no hay objetivos, pregunta el ticket y el margen, o calcula con los valores por defecto marcados como SUPUESTO.
+2. **Obtener los datos:** si hay conector (`references/conectores.md`), lee el periodo actual y el anterior equivalente. Si no, pide la exportación con las columnas de `assets/plantillas/resultados-campana.csv`. Pide también los datos de negocio: leads calificados, oportunidades, ventas y facturación (CRM o tienda).
+3. **Normalizar y calcular:** convierte los datos al CSV de la plantilla y ejecuta:
+   `python3 scripts/calcular_kpis.py resultados.csv --cplc-objetivo <X> | --cpa-objetivo <Y> [--ticket <T>] [--tasa-cierre <p>] --moneda <M>`
+4. **Comparar** contra el periodo anterior, el historial de la marca y `references/lineas-base.md`.
+5. **Diagnosticar** con el protocolo de 7 puntos de `references/optimizacion.md`, de las métricas de negocio hacia las de plataforma.
+6. **Decidir:** tabla Apagar / Mantener / Escalar con el motivo, más los movimientos de presupuesto.
+7. **Nuevo test:** una sola variable, con hipótesis, presupuesto, duración y métrica de decisión.
+8. **Aprender:** ejecuta la rutina 06 y actualiza la línea base propia en la ficha si hay 4 semanas o más de datos.
 
 ## Qué no hacer
 - Decir "funcionó bien" o "funcionó mal" sin números ni causas.

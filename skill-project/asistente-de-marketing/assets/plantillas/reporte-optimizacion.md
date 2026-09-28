@@ -1,7 +1,7 @@
-# Reporte de optimización — [Periodo] · Miral Autobuses
+# Reporte de optimización — [Periodo] · [MARCA]
 
 ## Resumen
-Gasto USD __ · Leads __ · Calificados __ · Oportunidades __ · Ventas __ · Costo por oportunidad USD __ (vs. periodo anterior: __ %)
+Gasto __ · Resultados (leads / compras) __ · Calificados __ · Oportunidades __ · Ventas __ · Facturación __ · Métrica final (CPA / ROAS / costo por oportunidad) __ (vs. periodo anterior: __ %)
 
 ## Embudo
 | Etapa | Actual | Anterior | Δ % | Línea base |
@@ -17,11 +17,11 @@ Gasto USD __ · Leads __ · Calificados __ · Oportunidades __ · Ventas __ · C
 |---|---|---|
 
 ## 6. Movimiento de presupuesto
-| Desde | Hacia | USD/día | Motivo |
+| Desde | Hacia | Monto/día | Motivo |
 |---|---|---|---|
 
 ## 7. Nuevo test
 Variable · Variante A vs. B · Presupuesto · Duración · Métrica de decisión
 
 ## Registro de aprendizaje
-Filas agregadas al historial y aprendizaje en una línea.
+Filas agregadas al historial, aprendizaje en una línea y cambios realizados en la ficha de marca.
