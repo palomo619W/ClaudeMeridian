@@ -61,9 +61,9 @@ def main():
         for c in supuestos:
             print(f"- {c}")
     if pendientes.get("N1"):
-        print("\nSiguiente paso: completar el Nivel 1 antes de planificar (rutinas/00-onboarding.md).")
+        print("\nSiguiente paso: faltan datos esenciales. Completa la entrevista de marca (rutinas/00-onboarding.md) antes de generar entregables.")
     elif pendientes.get("N2"):
-        print("\nSiguiente paso: pedir solo los campos de N2 que necesite la tarea actual (máx. 4).")
+        print("\nSiguiente paso: reúne los pendientes que necesite la tarea y pregúntalos en una sola ventana de opciones (cuestionario-marca.md, sección 5).")
     else:
         print("\nLa ficha permite planificar. Completa N3 para medir y optimizar con precisión.")
 

@@ -4,16 +4,16 @@
     {
       "id": 1,
       "prompt": "hola, tengo una tienda online de ropa deportiva para mujer en México y quiero empezar a hacer anuncios en Instagram, ¿me ayudas?",
-      "expected_output": "Onboarding: extrae lo ya dicho (e-commerce, ropa deportiva mujer, México, Instagram), confirma y pide solo el resto del Nivel 1 en un mensaje numerado con opciones (máx. 7), entrega un borrador de ficha de marca y una primera recomendación.",
+      "expected_output": "Entrevista de marca nueva: confirma lo ya dicho (e-commerce, ropa deportiva mujer, México, Instagram), pide solo los datos base abiertos que faltan en un mensaje y planifica las rondas de ventanas de opciones (máx. 4 preguntas, 2-4 opciones, header ≤12 caracteres); no genera ningún archivo hasta tener todo y confirmar.",
       "files": [],
       "assertions": [
         "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
-        "Hace como máximo 7 preguntas en el mensaje",
-        "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
-        "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
-        "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
-        "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
-        "Aporta al menos una recomendación inicial concreta además de preguntas"
+        "Las preguntas cerradas se presentan como ventanas de opciones (o, sin herramienta, como opciones con letra)",
+        "Cada ventana tiene como máximo 4 preguntas, cada pregunta entre 2 y 4 opciones y un encabezado de máximo 12 caracteres",
+        "Las preguntas abiertas se piden juntas en un solo mensaje, con ejemplos",
+        "Las opciones están adaptadas a un e-commerce de ropa deportiva para mujer en México (moneda MXN, público B2C)",
+        "No genera ningún archivo antes de terminar la entrevista y confirmar",
+        "Al final genera la ficha de marca una sola vez, en .docx"
       ]
     },
     {

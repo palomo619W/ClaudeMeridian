@@ -13,7 +13,7 @@ Toma los datos de la ficha de marca. Solo pregunta lo que falte **y** la tarea n
 |---|---|---|---|---|
 | 1 | Producto a vender | Productos / producto estrella | Define el cliente ideal y el creativo | Preguntar (bloqueante) |
 | 2 | Precio o ticket | Ticket promedio | Fija los techos de costo | Pedir un rango; si no, SUPUESTO |
-| 3 | Margen | Margen o CAC máximo | Cuánto se puede pagar por venta | Valor por defecto del cuestionario (N2.1) |
+| 3 | Margen | Margen o CAC máximo | Cuánto se puede pagar por venta | Ventana de opciones (ronda 3) o valor por defecto del cuestionario |
 | 4 | Cliente ideal | Cliente ideal | Audiencias, mensaje y canal | Proponer 2 perfiles y confirmar |
 | 5 | Zona geográfica | País / zonas | Segmentación y presupuesto | Preguntar (bloqueante) |
 | 6 | Problema que resuelve | Dolores | Hook y copy | Proponer y confirmar |

@@ -20,8 +20,8 @@ Tu misión es ser el **trafficker digital de la marca del usuario**. Decides con
 La skill no trae datos de ninguna marca: todo sale de lo que el usuario cuenta. Por eso, antes de planificar:
 
 1. **Busca la ficha de la marca.** Puede estar en `marketing/<marca>/perfil-marca.docx` en la carpeta de trabajo, o el usuario pudo adjuntarla o pegarla. Si existe, léela y no repitas preguntas ya respondidas.
-2. **Si no hay ficha**, ejecuta `rutinas/00-onboarding.md`. Es un cuestionario corto, por niveles, con opciones y valores por defecto (`references/cuestionario-marca.md`). Si el usuario ya compartió su web, un brief o un catálogo, extrae de ahí la información y solo confirma.
-3. **Pregunta con precisión, no en exceso.** Pide solo lo que la tarea necesita (máximo 7 preguntas por mensaje). Si el usuario responde "no sé", usa el valor por defecto, márcalo como **SUPUESTO** y sigue. Un plan con supuestos explícitos ayuda más que un usuario frenado por preguntas.
+2. **Si es una marca nueva (no hay ficha)**, ejecuta `rutinas/00-onboarding.md`: una **entrevista completa** que capta toda la información inicial **antes de generar cualquier archivo** (`references/cuestionario-marca.md`). Pide los datos abiertos esenciales en un mensaje, luego 5 rondas de **ventanas de opciones** (`AskUserQuestion` o la herramienta de opciones del entorno) donde el usuario solo hace clic, y al final un único mensaje con los detalles abiertos. Si el usuario ya compartió su web, un brief o un catálogo, extrae de ahí la información y solo confirma.
+3. **Genera una sola vez.** No generes documentos a medias para luego volver a preguntar y regenerarlos. Primero reúne todo lo que la tarea necesita (en una ventana de opciones si falta algo), confirma, y después genera los archivos en una sola pasada. Si el usuario responde "no sé", usa el valor por defecto, márcalo como **SUPUESTO** y sigue.
 4. **Retroalimenta la ficha.** Todo dato nuevo que aparezca en la conversación (precio, margen, objeción, resultado) se incorpora a la ficha y se avisa en una línea. Cómo guardarla y reutilizarla está en `references/memoria-de-marca.md`.
 
 Hay un ejemplo de ficha completa en `assets/ejemplos/perfil-ejemplo-b2b-autobuses.md`. Es solo ilustrativo: nunca uses sus datos para otra marca.
@@ -37,7 +37,7 @@ Una tienda online de USD 30 por pedido y un fabricante que vende contratos de US
 
 | Si el usuario... | Ejecuta la rutina | Referencias clave |
 |---|---|---|
-| Empieza, no hay ficha, o quiere configurar o actualizar su marca | `rutinas/00-onboarding.md` | `cuestionario-marca.md`, `memoria-de-marca.md` |
+| Empieza con una marca nueva, no hay ficha, o quiere configurar o actualizar su marca | `rutinas/00-onboarding.md` (entrevista completa con ventanas de opciones) | `cuestionario-marca.md`, `memoria-de-marca.md` |
 | Dice "Quiero pautar [PRODUCTO]" o pide una campaña | `rutinas/01-nueva-campana.md` | `metodologia.md`, `modelos-de-negocio.md`, `funnel.md`, `creativos.md`, `leads-calificacion.md`, `plataformas/*` |
 | Entrega resultados, capturas o un CSV de campañas | `rutinas/02-analisis-optimizacion.md` | `medicion-kpis.md`, `optimizacion.md`, `lineas-base.md` |
 | Indica un presupuesto o pregunta cómo repartirlo | `rutinas/03-presupuesto.md` | `presupuesto.md` |

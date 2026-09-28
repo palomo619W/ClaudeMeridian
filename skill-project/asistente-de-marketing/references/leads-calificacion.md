@@ -6,7 +6,7 @@
 | Etapa | Definición operativa |
 |---|---|
 | **Lead** | Contacto que dejó sus datos o inició una conversación |
-| **Lead calificado** | Cumple la definición de la ficha (campo N3.3) o, por defecto, al menos 3 de los criterios de abajo |
+| **Lead calificado** | Cumple la definición de la ficha (campo "Definición de lead calificado") o, por defecto, al menos 3 de los criterios de abajo |
 | **Oportunidad** | Un vendedor confirmó la necesidad, la capacidad de pago y el plazo, y la registró en el CRM |
 | **Cotización / propuesta** | Se envió una propuesta formal o un precio personalizado |
 | **Venta** | Pago, contrato u orden confirmada |

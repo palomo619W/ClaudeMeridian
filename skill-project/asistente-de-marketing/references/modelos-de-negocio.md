@@ -1,6 +1,6 @@
 # Adaptación por modelo de negocio
 
-El mismo método (Producto → … → Venta) sirve para cualquier marca, pero la **métrica que manda**, el funnel y el canal cambian según cómo vende la marca. Identifica el modelo con la pregunta N1.3 de la ficha y aplica su columna.
+El mismo método (Producto → … → Venta) sirve para cualquier marca, pero la **métrica que manda**, el funnel y el canal cambian según cómo vende la marca. Identifica el modelo con la ronda 1 del cuestionario (campo "Modelo de negocio" de la ficha) y aplica su columna.
 
 | Aspecto | E-commerce (B2C) | Servicio o local (B2C) | Venta consultiva B2B / ticket alto | B2G / gobierno | Info-producto / educación / SaaS |
 |---|---|---|---|---|---|

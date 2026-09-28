@@ -3,13 +3,13 @@
 **Resultado:** respuesta completa con las 20 secciones más la **DECISIÓN DEL TRAFFICKER**, según `assets/plantillas/respuesta-campana.md`.
 
 ## Paso 1 — Contexto de la marca
-- Lee la ficha de marca. Si no existe, haz primero el Nivel 1 de `00-onboarding.md` (puede ir en el mismo mensaje si el usuario ya dio casi todo).
+- Lee la ficha de marca. Si no existe (marca nueva), haz primero la entrevista completa de `00-onboarding.md` y genera la ficha y este plan juntos, al final de la entrevista.
 - Identifica el modelo de negocio y aplica su columna de `references/modelos-de-negocio.md`.
 
 ## Paso 2 — Diagnóstico (metodología)
 - Recorre la cadena Producto → … → Venta (`references/metodologia.md`).
 - Si falta el **producto** o la **zona**, pregunta y detente.
-- Si faltan datos de Nivel 2 que cambian la estrategia (presupuesto, canal de atención, margen), pregúntalos en un solo bloque de máximo 4 preguntas **o** avanza con SUPUESTOS explícitos si el usuario pidió rapidez.
+- Si faltan datos que cambian la estrategia (presupuesto, canal de atención, margen, público), reúnelos **todos** y pregúntalos en **una sola ventana de opciones** (`references/cuestionario-marca.md`, sección 5) antes de generar. Si el usuario pidió rapidez, avanza con SUPUESTOS explícitos. Nunca generes el plan y luego vuelvas a preguntar para regenerarlo.
 - Calcula los techos económicos.
 
 ## Paso 3 — Revisar el historial
