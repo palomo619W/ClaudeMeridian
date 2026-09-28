@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+      "passed": true,
+      "evidence": "'escala Hook dolor A'"
+    },
+    {
+      "text": "Recomienda apagar el anuncio 'Hook producto B'",
+      "passed": true,
+      "evidence": "'Apaga el creativo Hook producto B'"
+    },
+    {
+      "text": "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+      "passed": true,
+      "evidence": "CPL calificado $10.9 y $50.6"
+    },
+    {
+      "text": "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+      "passed": true,
+      "evidence": "Explica por qué A gana (dolor conecta) y por qué B falla, con datos del embudo"
+    },
+    {
+      "text": "Indica cuánto presupuesto mover con una cifra concreta",
+      "passed": true,
+      "evidence": "'de $105 a unos $130/semana' y prueba de $70-105/semana en Intereses"
+    },
+    {
+      "text": "Propone un nuevo test que cambia una sola variable",
+      "passed": true,
+      "evidence": "Sustituir el anuncio en Intereses por el testimonio para aislar el público"
+    },
+    {
+      "text": "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+      "passed": true,
+      "evidence": "'2 leads calificados es muy poca muestra' y subir 20-30 % cada 3-4 días"
+    },
+    {
+      "text": "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo",
+      "passed": false,
+      "evidence": "No registra aprendizaje ni entrega filas para un historial"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  }
+}

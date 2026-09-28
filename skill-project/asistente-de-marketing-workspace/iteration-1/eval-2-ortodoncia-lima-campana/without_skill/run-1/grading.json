@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Incluye las 20 secciones numeradas del plan de campaña",
+      "passed": false,
+      "evidence": "Plan de 9 secciones propias, no las 20 del formato"
+    },
+    {
+      "text": "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+      "passed": false,
+      "evidence": "No hay sección DECISIÓN DEL TRAFFICKER"
+    },
+    {
+      "text": "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+      "passed": false,
+      "evidence": "Reparte por canal (Meta 70 % / Google 30 %), no en Prospección/Remarketing/Experimentación"
+    },
+    {
+      "text": "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+      "passed": true,
+      "evidence": "'Costo máximo aceptable por paciente: hasta ~US$500'"
+    },
+    {
+      "text": "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+      "passed": true,
+      "evidence": "'Cuidado con las políticas de Meta en salud' (atributos personales, antes/después)"
+    },
+    {
+      "text": "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+      "passed": false,
+      "evidence": "Lista 4 formatos de anuncio y 2 copies, pero sin hook de 0-3 s por concepto ni formato 9:16 explícito"
+    },
+    {
+      "text": "Incluye preguntas de calificación de leads",
+      "passed": false,
+      "evidence": "No propone preguntas de calificación con criterio; el mensaje de ausencia pide nombre/distrito/horario"
+    },
+    {
+      "text": "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+      "passed": true,
+      "evidence": "'Horario 9 a 7': programar anuncios o respuesta automática fuera de horario"
+    },
+    {
+      "text": "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca",
+      "passed": true,
+      "evidence": "Cierra con 5 preguntas para afinar (sin lista de supuestos)"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 5,
+    "total": 9,
+    "pass_rate": 0.44
+  }
+}

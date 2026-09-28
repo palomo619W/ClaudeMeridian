@@ -1,0 +1,50 @@
+{
+  "expectations": [
+    {
+      "text": "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+      "passed": true,
+      "evidence": "'escala Hook dolor A un +20 %'"
+    },
+    {
+      "text": "Recomienda apagar el anuncio 'Hook producto B'",
+      "passed": true,
+      "evidence": "'apaga Hook producto B'"
+    },
+    {
+      "text": "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+      "passed": true,
+      "evidence": "CPLc 10,94 y 50,60 USD en la tabla"
+    },
+    {
+      "text": "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+      "passed": true,
+      "evidence": "Secciones 1 Qué funcionó, 2 Qué empeoró, 3 Por qué posiblemente ocurrió"
+    },
+    {
+      "text": "Indica cuánto presupuesto mover con una cifra concreta",
+      "passed": true,
+      "evidence": "'+3 USD (de 15 a 18 USD/día)' y '12 USD' al test"
+    },
+    {
+      "text": "Propone un nuevo test que cambia una sola variable",
+      "passed": true,
+      "evidence": "'Variable: audiencia (solo una)': mismo anuncio A en Amplia vs Intereses"
+    },
+    {
+      "text": "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+      "passed": true,
+      "evidence": "'El volumen todavía es bajo' y 'No subas más del 20-30 % de golpe'"
+    },
+    {
+      "text": "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo",
+      "passed": true,
+      "evidence": "Filas agregadas a marketing/software-facturacion-pymes/historial-campanas.csv (GANADOR / PERDEDOR)"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}

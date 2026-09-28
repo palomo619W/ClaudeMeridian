@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "skill_name": "asistente-de-marketing",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-09-28T17:06:03Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 99.6,
+        "tokens": 63689,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+          "passed": true,
+          "evidence": "Confirma en una línea: 'vendes ropa deportiva para mujer en una tienda online en México… ¿Es correcto?' y no vuelve a preguntarlo"
+        },
+        {
+          "text": "Hace como máximo 7 preguntas en el mensaje",
+          "passed": true,
+          "evidence": "Hace exactamente 7 preguntas numeradas"
+        },
+        {
+          "text": "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+          "passed": true,
+          "evidence": "Cada pregunta trae un ejemplo o opciones a) b) c) d)"
+        },
+        {
+          "text": "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+          "passed": true,
+          "evidence": "'Si no sabes alguno, escribe \"no sé\" y uso un valor estándar'"
+        },
+        {
+          "text": "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+          "passed": true,
+          "evidence": "Pregunta 5 (gasto promedio por pedido) y 6 (inversión mensual)"
+        },
+        {
+          "text": "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+          "passed": true,
+          "evidence": "Creó marketing/tienda-ropa-deportiva-mujer/perfil-marca.md y lo menciona (29 % completa)"
+        },
+        {
+          "text": "Aporta al menos una recomendación inicial concreta además de preguntas",
+          "passed": true,
+          "evidence": "Sección 'Por dónde empezaría': campaña de Ventas, $200-300 MXN/día, reparto 65/15/20, Reels"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 280.1,
+        "tokens": 103205,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Incluye las 20 secciones numeradas del plan de campaña",
+          "passed": true,
+          "evidence": "Secciones '## 1. Objetivo comercial' a '## 20. Acciones para los siguientes 7, 14 y 30 días'"
+        },
+        {
+          "text": "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+          "passed": true,
+          "evidence": "Tabla 'DECISIÓN DEL TRAFFICKER' con C1 17,33 USD/día, C2 4 USD/día, C3 10,67 USD/día e hipótesis"
+        },
+        {
+          "text": "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+          "passed": true,
+          "evidence": "Prospección 520 + Remarketing 120 + Experimentación 160 = 800 USD"
+        },
+        {
+          "text": "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+          "passed": true,
+          "evidence": "KPI principal: tratamientos iniciados; techos por tratamiento (375), evaluación (112) y conversación calificada (56)"
+        },
+        {
+          "text": "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+          "passed": true,
+          "evidence": "'Categoría de salud: el copy no puede aludir a atributos personales', sin antes/después"
+        },
+        {
+          "text": "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+          "passed": true,
+          "evidence": "3 conceptos (A, B, C) con Hook 0-3 s y formato 'Video 9:16 + 4:5'"
+        },
+        {
+          "text": "Incluye preguntas de calificación de leads",
+          "passed": true,
+          "evidence": "Sección 13: 5 preguntas con opciones y puntaje (≥3 = calificado)"
+        },
+        {
+          "text": "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+          "passed": true,
+          "evidence": "'Riesgo: el horario de 9:00 a 19:00 con 1 persona' + mensaje de ausencia 19:00-9:00"
+        },
+        {
+          "text": "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca",
+          "passed": true,
+          "evidence": "Bloque 'Supuestos usados' y 'Preguntas para mejorar la ficha (máx. 3)'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 131.3,
+        "tokens": 73220,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+          "passed": true,
+          "evidence": "'escala Hook dolor A un +20 %'"
+        },
+        {
+          "text": "Recomienda apagar el anuncio 'Hook producto B'",
+          "passed": true,
+          "evidence": "'apaga Hook producto B'"
+        },
+        {
+          "text": "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+          "passed": true,
+          "evidence": "CPLc 10,94 y 50,60 USD en la tabla"
+        },
+        {
+          "text": "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+          "passed": true,
+          "evidence": "Secciones 1 Qué funcionó, 2 Qué empeoró, 3 Por qué posiblemente ocurrió"
+        },
+        {
+          "text": "Indica cuánto presupuesto mover con una cifra concreta",
+          "passed": true,
+          "evidence": "'+3 USD (de 15 a 18 USD/día)' y '12 USD' al test"
+        },
+        {
+          "text": "Propone un nuevo test que cambia una sola variable",
+          "passed": true,
+          "evidence": "'Variable: audiencia (solo una)': mismo anuncio A en Amplia vs Intereses"
+        },
+        {
+          "text": "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+          "passed": true,
+          "evidence": "'El volumen todavía es bajo' y 'No subas más del 20-30 % de golpe'"
+        },
+        {
+          "text": "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo",
+          "passed": true,
+          "evidence": "Filas agregadas a marketing/software-facturacion-pymes/historial-campanas.csv (GANADOR / PERDEDOR)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.57,
+        "passed": 4,
+        "failed": 3,
+        "total": 7,
+        "time_seconds": 61.2,
+        "tokens": 46141,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+          "passed": true,
+          "evidence": "No repregunta país ni tipo de tienda; pregunta cobertura de envío, que es otro dato"
+        },
+        {
+          "text": "Hace como máximo 7 preguntas en el mensaje",
+          "passed": false,
+          "evidence": "Hace 8 preguntas al final"
+        },
+        {
+          "text": "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+          "passed": true,
+          "evidence": "Preguntas numeradas, la mayoría con ejemplos entre paréntesis"
+        },
+        {
+          "text": "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+          "passed": false,
+          "evidence": "No menciona que se pueda responder 'no sé' ni valores por defecto"
+        },
+        {
+          "text": "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+          "passed": true,
+          "evidence": "Pregunta 2 (inversión mensual) y 3 (ticket y margen)"
+        },
+        {
+          "text": "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+          "passed": false,
+          "evidence": "No entrega ficha de marca ni explica cómo se guardará lo aprendido"
+        },
+        {
+          "text": "Aporta al menos una recomendación inicial concreta además de preguntas",
+          "passed": true,
+          "evidence": "Plan amplio: base técnica, estructura, presupuesto, creativos, métricas, 4 semanas"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.44,
+        "passed": 4,
+        "failed": 5,
+        "total": 9,
+        "time_seconds": 69.4,
+        "tokens": 47418,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Incluye las 20 secciones numeradas del plan de campaña",
+          "passed": false,
+          "evidence": "Plan de 9 secciones propias, no las 20 del formato"
+        },
+        {
+          "text": "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+          "passed": false,
+          "evidence": "No hay sección DECISIÓN DEL TRAFFICKER"
+        },
+        {
+          "text": "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+          "passed": false,
+          "evidence": "Reparte por canal (Meta 70 % / Google 30 %), no en Prospección/Remarketing/Experimentación"
+        },
+        {
+          "text": "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+          "passed": true,
+          "evidence": "'Costo máximo aceptable por paciente: hasta ~US$500'"
+        },
+        {
+          "text": "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+          "passed": true,
+          "evidence": "'Cuidado con las políticas de Meta en salud' (atributos personales, antes/después)"
+        },
+        {
+          "text": "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+          "passed": false,
+          "evidence": "Lista 4 formatos de anuncio y 2 copies, pero sin hook de 0-3 s por concepto ni formato 9:16 explícito"
+        },
+        {
+          "text": "Incluye preguntas de calificación de leads",
+          "passed": false,
+          "evidence": "No propone preguntas de calificación con criterio; el mensaje de ausencia pide nombre/distrito/horario"
+        },
+        {
+          "text": "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+          "passed": true,
+          "evidence": "'Horario 9 a 7': programar anuncios o respuesta automática fuera de horario"
+        },
+        {
+          "text": "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca",
+          "passed": true,
+          "evidence": "Cierra con 5 preguntas para afinar (sin lista de supuestos)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.88,
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "time_seconds": 60.5,
+        "tokens": 47232,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recomienda escalar o priorizar el anuncio 'Hook dolor A'",
+          "passed": true,
+          "evidence": "'escala Hook dolor A'"
+        },
+        {
+          "text": "Recomienda apagar el anuncio 'Hook producto B'",
+          "passed": true,
+          "evidence": "'Apaga el creativo Hook producto B'"
+        },
+        {
+          "text": "Reporta el CPL calificado de ambos anuncios correctamente (≈10,94 y ≈50,60 USD)",
+          "passed": true,
+          "evidence": "CPL calificado $10.9 y $50.6"
+        },
+        {
+          "text": "Explica qué funcionó, qué empeoró y por qué pudo ocurrir",
+          "passed": true,
+          "evidence": "Explica por qué A gana (dolor conecta) y por qué B falla, con datos del embudo"
+        },
+        {
+          "text": "Indica cuánto presupuesto mover con una cifra concreta",
+          "passed": true,
+          "evidence": "'de $105 a unos $130/semana' y prueba de $70-105/semana en Intereses"
+        },
+        {
+          "text": "Propone un nuevo test que cambia una sola variable",
+          "passed": true,
+          "evidence": "Sustituir el anuncio en Intereses por el testimonio para aislar el público"
+        },
+        {
+          "text": "Advierte sobre el bajo volumen de datos o recomienda subir presupuesto de forma gradual (≈20-30 %)",
+          "passed": true,
+          "evidence": "'2 leads calificados es muy poca muestra' y subir 20-30 % cada 3-4 días"
+        },
+        {
+          "text": "Registra el aprendizaje (historial de campañas) o entrega filas para registrarlo",
+          "passed": false,
+          "evidence": "No registra aprendizaje ni entrega filas para un historial"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 170.3333,
+        "stddev": 96.373,
+        "min": 99.6,
+        "max": 280.1
+      },
+      "tokens": {
+        "mean": 80038.0,
+        "stddev": 20621.4065,
+        "min": 63689,
+        "max": 103205
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.63,
+        "stddev": 0.2261,
+        "min": 0.44,
+        "max": 0.88
+      },
+      "time_seconds": {
+        "mean": 63.7,
+        "stddev": 4.9487,
+        "min": 60.5,
+        "max": 69.4
+      },
+      "tokens": {
+        "mean": 46930.3333,
+        "stddev": 689.8799,
+        "min": 46141,
+        "max": 47418
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.37",
+      "time_seconds": "+106.6",
+      "tokens": "+33108"
+    }
+  },
+  "notes": [
+    "La skill gana sobre todo en formato y proceso: 20 secciones + Decisión, reparto Prospección/Remarketing/Experimentación, ficha de marca, supuestos explícitos y registro de aprendizaje.",
+    "En el análisis de resultados (eval 3) la versión sin skill también acierta qué apagar y escalar: la diferencia es el registro en historial y el mayor detalle (fechas, umbrales, test).",
+    "La skill tarda ~2,7x más y usa ~1,7x más tokens, porque lee varios archivos de referencia y ejecuta scripts.",
+    "Hallazgo: la columna presupuesto del CSV es ambigua (diario vs. semanal) y verificar_perfil.py marca como pendiente un campo con la palabra PENDIENTE en notas laterales."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Incluye las 20 secciones numeradas del plan de campaña",
+      "passed": true,
+      "evidence": "Secciones '## 1. Objetivo comercial' a '## 20. Acciones para los siguientes 7, 14 y 30 días'"
+    },
+    {
+      "text": "Incluye una sección 'DECISIÓN DEL TRAFFICKER' con campañas a lanzar hoy, presupuesto por campaña e hipótesis",
+      "passed": true,
+      "evidence": "Tabla 'DECISIÓN DEL TRAFFICKER' con C1 17,33 USD/día, C2 4 USD/día, C3 10,67 USD/día e hipótesis"
+    },
+    {
+      "text": "Distribuye el presupuesto en Prospección / Remarketing / Experimentación y el total suma 800 USD al mes",
+      "passed": true,
+      "evidence": "Prospección 520 + Remarketing 120 + Experimentación 160 = 800 USD"
+    },
+    {
+      "text": "La métrica principal es el costo por cita, valoración o paciente (o lead calificado), no solo el CPL",
+      "passed": true,
+      "evidence": "KPI principal: tratamientos iniciados; techos por tratamiento (375), evaluación (112) y conversación calificada (56)"
+    },
+    {
+      "text": "Menciona restricciones o políticas de publicidad para salud / servicios médicos",
+      "passed": true,
+      "evidence": "'Categoría de salud: el copy no puede aludir a atributos personales', sin antes/después"
+    },
+    {
+      "text": "Propone al menos 3 conceptos creativos, cada uno con hook de los primeros 3 segundos y formato vertical 9:16",
+      "passed": true,
+      "evidence": "3 conceptos (A, B, C) con Hook 0-3 s y formato 'Video 9:16 + 4:5'"
+    },
+    {
+      "text": "Incluye preguntas de calificación de leads",
+      "passed": true,
+      "evidence": "Sección 13: 5 preguntas con opciones y puntaje (≥3 = calificado)"
+    },
+    {
+      "text": "Considera el horario de atención de WhatsApp (9 a 19 h) en la estrategia",
+      "passed": true,
+      "evidence": "'Riesgo: el horario de 9:00 a 19:00 con 1 persona' + mensaje de ausencia 19:00-9:00"
+    },
+    {
+      "text": "Lista supuestos explícitos y/o preguntas pendientes para mejorar la información de la marca",
+      "passed": true,
+      "evidence": "Bloque 'Supuestos usados' y 'Preguntas para mejorar la ficha (máx. 3)'"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

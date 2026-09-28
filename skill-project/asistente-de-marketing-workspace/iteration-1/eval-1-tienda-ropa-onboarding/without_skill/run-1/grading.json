@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+      "passed": true,
+      "evidence": "No repregunta país ni tipo de tienda; pregunta cobertura de envío, que es otro dato"
+    },
+    {
+      "text": "Hace como máximo 7 preguntas en el mensaje",
+      "passed": false,
+      "evidence": "Hace 8 preguntas al final"
+    },
+    {
+      "text": "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+      "passed": true,
+      "evidence": "Preguntas numeradas, la mayoría con ejemplos entre paréntesis"
+    },
+    {
+      "text": "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+      "passed": false,
+      "evidence": "No menciona que se pueda responder 'no sé' ni valores por defecto"
+    },
+    {
+      "text": "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+      "passed": true,
+      "evidence": "Pregunta 2 (inversión mensual) y 3 (ticket y margen)"
+    },
+    {
+      "text": "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+      "passed": false,
+      "evidence": "No entrega ficha de marca ni explica cómo se guardará lo aprendido"
+    },
+    {
+      "text": "Aporta al menos una recomendación inicial concreta además de preguntas",
+      "passed": true,
+      "evidence": "Plan amplio: base técnica, estructura, presupuesto, creativos, métricas, 4 semanas"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 3,
+    "total": 7,
+    "pass_rate": 0.57
+  }
+}

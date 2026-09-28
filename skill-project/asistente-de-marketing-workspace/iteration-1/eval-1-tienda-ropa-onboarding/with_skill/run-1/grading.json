@@ -1,0 +1,45 @@
+{
+  "expectations": [
+    {
+      "text": "No vuelve a preguntar datos que el usuario ya dio (tienda online, ropa deportiva para mujer, México, Instagram); a lo sumo los confirma",
+      "passed": true,
+      "evidence": "Confirma en una línea: 'vendes ropa deportiva para mujer en una tienda online en México… ¿Es correcto?' y no vuelve a preguntarlo"
+    },
+    {
+      "text": "Hace como máximo 7 preguntas en el mensaje",
+      "passed": true,
+      "evidence": "Hace exactamente 7 preguntas numeradas"
+    },
+    {
+      "text": "Las preguntas están numeradas e incluyen opciones o ejemplos de respuesta",
+      "passed": true,
+      "evidence": "Cada pregunta trae un ejemplo o opciones a) b) c) d)"
+    },
+    {
+      "text": "Indica que se puede responder 'no sé' o que usará valores por defecto/supuestos",
+      "passed": true,
+      "evidence": "'Si no sabes alguno, escribe \"no sé\" y uso un valor estándar'"
+    },
+    {
+      "text": "Pregunta por el valor promedio de venta (ticket) y por el presupuesto o margen",
+      "passed": true,
+      "evidence": "Pregunta 5 (gasto promedio por pedido) y 6 (inversión mensual)"
+    },
+    {
+      "text": "Entrega un borrador de ficha de marca o explica cómo se guardará lo aprendido de la marca",
+      "passed": true,
+      "evidence": "Creó marketing/tienda-ropa-deportiva-mujer/perfil-marca.md y lo menciona (29 % completa)"
+    },
+    {
+      "text": "Aporta al menos una recomendación inicial concreta además de preguntas",
+      "passed": true,
+      "evidence": "Sección 'Por dónde empezaría': campaña de Ventas, $200-300 MXN/día, reparto 65/15/20, Reels"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}
