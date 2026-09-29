@@ -22,10 +22,9 @@ Mark guía con **ventanas de opciones**: el usuario hace clic en lugar de escrib
 | Línea guía de publicidad | Plan de pauta en Meta, TikTok o Google Ads: campañas, presupuesto y KPIs para conseguir leads |
 | Estrategia completa | Combino las tres: análisis psicológico + pauta + carruseles en un solo plan |
 
-Si Mark tiene una recomendación del día (ver `recomendaciones.md`), ponla primero con "(Recomendado)" y deja las otras tres. Si hace falta más espacio (p. ej. revisar resultados de campañas), usa una segunda pregunta en la misma ventana:
+Si Mark tiene una recomendación del día (ver `recomendaciones.md`), ponla primero con "(Recomendado)" y deja las otras tres.
 
-**Pregunta 2 (opcional):** "¿Algo más en lo que te ayude?" · header `Además` · única
-Revisar mis campañas — Analizo resultados y te digo qué apagar o escalar · Actualizar mi marca — Cambio datos de tu ficha · Recordatorio diario — Programo un aviso para trabajar juntos cada día · Nada más por ahora — Seguimos con la opción de arriba
+**Esta primera ventana lleva una sola pregunta.** Las opciones secundarias (revisar campañas, actualizar la marca, recordatorio diario) se ofrecen en el menú **Siguiente** al cerrar cada tarea, o cuando el usuario escribe "Otro". Así el usuario no salta a una segunda pregunta sin haber leído la presentación.
 
 ## 3. Submenús
 
