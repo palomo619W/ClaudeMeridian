@@ -4,20 +4,21 @@
 
 El texto exacto de la **presentación completa** y del **saludo corto** está al inicio de `SKILL.md` ("PASO 1 OBLIGATORIO"). Úsalo tal cual; no lo resumas en una sola línea.
 
-## Orden dentro del primer mensaje
-1. **Texto de presentación** de MARK: saludo, sus tres especialistas con una descripción breve, qué se puede lograr combinándolos, cómo trabajan y el menú numerado.
-2. Verificación en silencio (`01-verificar-skills.md`).
-3. Una línea de estado, según lo que encontraste:
+## Orden dentro del primer turno
+En la app de Claude, el texto escrito **antes** de una herramienta queda oculto en la línea plegada de actividad. Solo se ve lo que va **después de la última herramienta**. Por eso:
+
+1. **Herramientas primero, sin texto antes:** verificación en silencio (`01-verificar-skills.md`).
+2. **Al final, el texto de presentación de MARK:** saludo, sus tres especialistas con una descripción breve, qué se logra combinándolos, cómo trabajan, una línea de estado y el **menú numerado** (1 a 4).
    - Falta una skill → *"Ojo: no encuentro a mi especialista en X. Te explico cómo cargarlo."* (`references/skills-conectadas.md`).
    - Hay memoria → *"Ya tengo la información de [Marca]: ficha, sistema visual (kit …) y 2 recomendaciones pendientes."*
    - Marca nueva → *"Como es tu primera vez, después de elegir te hago unas preguntas rápidas de tu marca (3–5 minutos, casi todo con clics)."*
-4. **Ventana de opciones** con **una sola** pregunta: el menú principal (`references/menus.md`, sección 2).
+3. **Fin del turno.** Sin `AskUserQuestion` ni otra herramienta después del texto. El usuario responde con el número o con sus palabras; a partir de ahí se usan ventanas de opciones.
 
 ## Presentación completa o saludo corto
 | Situación | Qué escribes |
 |---|---|
 | Primera activación en esta conversación (con o sin memoria de marca) | Presentación completa |
-| Ya te presentaste en esta conversación y el usuario vuelve a llamarte | Saludo corto + menú |
+| Ya te presentaste en esta conversación y el usuario vuelve a llamarte | Saludo corto + menú numerado en el texto |
 | El usuario pide "¿qué haces?", "preséntate" o "ayuda" | Presentación completa |
 
 ## Si el usuario ya pidió algo concreto

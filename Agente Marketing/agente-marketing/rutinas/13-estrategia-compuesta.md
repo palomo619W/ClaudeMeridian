@@ -49,7 +49,7 @@ Tabla de **calendario** (2 semanas o el horizonte elegido): día · pieza · for
 1. **Resumen en el chat** (5–8 líneas): el insight central, qué se pauta, cuánto, y qué se publica primero.
 2. **Documento** `marketing/<marca>/entregables/<fecha>_estrategia_<tema>.docx` con `assets/plantillas/estrategia-compuesta.md` (y `.xlsx` con las tablas de presupuesto, calendario y KPIs), usando los scripts del trafficker.
 3. **Carruseles** (HTML + PNG + caption) en `marketing/<marca>/entregables/carruseles/`.
-4. **Recomendaciones** (máx. 3, "Te recomiendo… porque…") y ventana **Decisión**.
+4. **Recomendaciones** (máx. 3, "Te recomiendo… porque…") al final del texto, con las opciones numeradas (1 Sí, aplícalo · 2 Ajustémoslo · 3 Ahora no). Sin ventana después, para que el resumen no quede oculto.
 5. **Seguimiento:** registra en `estado-mark.md` las fechas de publicación y de revisión de resultados; ofrece el recordatorio diario si no existe.
 
 ## Otros ejemplos compuestos que usan esta misma rutina

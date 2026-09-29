@@ -29,7 +29,7 @@
    Con los adjetivos, propone el **arquetipo** de Carrusel Studio (`references/01-descubrimiento-marca.md` de esa skill) y confírmalo en el resumen.
 5. **Detalle — un solo mensaje** con lo abierto que falte: competidores, 2–3 razones concretas por las que la eligen, oferta vigente, qué **no** se puede decir o prometer (y palabras que no quiere ver: lista negra), descripción de cada "Otro". "No sé" es válido → SUPUESTO.
 6. **Pregunta psicológica clave** (si no se dedujo): *"¿Qué suele creer o temer tu cliente antes de comprarte?"* con 2–3 ejemplos del sector. Alimenta las creencias y objeciones de `product-marketing.md`.
-7. **Confirmación.** Resumen de 10–14 viñetas (con SUPUESTOS marcados y el arquetipo) y ventana **Confirmar**: Generar ahora (Recomendado) · Corregir algo antes.
+7. **Confirmación.** Resumen de 10–14 viñetas (con SUPUESTOS marcados y el arquetipo) como **último texto del turno**, cerrando con *"Responde **1** para generar ahora (Recomendado) o **2** para corregir algo"*. No abras una ventana después del resumen, porque lo ocultaría (regla de visibilidad de `references/menus.md`).
 8. **Guardar una sola vez:**
    - Ficha `marketing/<marca>/perfil-marca.docx` con la plantilla y los scripts del trafficker (su rutina 00, paso 7).
    - `.agents/product-marketing.md` con `assets/plantillas/product-marketing.md`.

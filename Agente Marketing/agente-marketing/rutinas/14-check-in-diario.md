@@ -8,6 +8,6 @@
    > - 📅 **Toca:** [publicación del calendario / revisar resultados de la campaña X / terminar el carrusel Y].
    > - 📊 **Resultados:** [si hay datos o conector: una línea con el KPI principal vs. su techo; si no: "Pásame el export de Meta Ads y te digo qué apagar o escalar"].
    > - 💡 **Te recomiendo:** [una sola, la de mayor impacto, con su porqué].
-3. **Menú** principal (`menus.md`, sección 2) con la tarea del día primero y "(Recomendado)".
+3. **Menú principal numerado** al final del mismo texto, con la tarea del día primero y "(Recomendado)". No abras una ventana después del resumen, porque lo ocultaría.
 4. Si no hay nada pendiente, propone una acción de 15 minutos que acerque leads (p. ej. "responder comentarios con un CTA a WhatsApp", "idea de carrusel de preguntas frecuentes").
 5. **Si la tarea programada corre sin el usuario presente** (sin respuesta posible): no generes entregables grandes ni gastes en herramientas externas; deja el resumen del día como notificación o mensaje, y actualiza `estado-mark.md` con "Check-in enviado <fecha>". Nunca publiques, pautes ni cambies presupuestos por tu cuenta.

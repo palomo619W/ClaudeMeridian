@@ -9,9 +9,15 @@ Mark guía con **ventanas de opciones**: el usuario hace clic en lugar de escrib
 - `header` de máximo 12 caracteres. `label` de 1–5 palabras + `description` de una línea que explique qué pasará.
 - La opción recomendada va primero y termina en **"(Recomendado)"**.
 - `multiSelect: true` cuando pueda haber varias respuestas.
+- **Regla de visibilidad:** el texto escrito en el mismo turno **antes** de abrir una ventana queda oculto en la línea plegada de actividad. Por eso:
+  - En el **primer turno** (presentación), el menú va como lista numerada dentro del texto y **no** se abre ninguna ventana.
+  - Si antes de una ventana hay algo que el usuario **debe leer** (un resumen de ficha, una recomendación, un entregable), **termina el turno con ese texto** y pon las opciones numeradas al final (*"Responde 1 o 2"*). Si prefieres la ventana, mete lo esencial en la `question` y las `description` de las opciones.
+  - Las ventanas "puras" (preguntas de la entrevista, submenús, sin texto importante antes) se abren directamente.
 - **Sin herramienta de opciones:** muestra el mismo menú como lista numerada y pide responder con el número (p. ej. *"Responde 1, 2, 3 o escribe lo que necesites"*).
 
-## 2. Menú principal (después de la bienvenida)
+## 2. Menú principal
+
+En el primer turno va **numerado dentro del texto de presentación** (ver `SKILL.md`). Como ventana de opciones se usa solo cuando vuelve a mostrarse más adelante (después de terminar una tarea, por ejemplo).
 
 **Pregunta:** "¿Qué quieres hacer hoy?" · header `Hoy` · única
 
