@@ -3,10 +3,11 @@
 **Cuándo:** se dispara con la tarea programada diaria (`15-tarea-programada.md`), o cuando el usuario pregunta "¿qué hago hoy?", "¿cómo vamos?".
 
 1. **Lee la memoria** (`01-verificar-skills.md`): `estado-mark.md` (pendientes, fechas de publicación y de revisión, recomendaciones), ficha e historial.
-2. **Arma el resumen del día** (máximo 6 líneas):
+2. **Arma el resumen del día** (máximo 10 líneas):
    > ☀️ **Buen día, soy Mark.** Esto es lo de hoy para **[Marca]**:
    > - 📅 **Toca:** [publicación del calendario / revisar resultados de la campaña X / terminar el carrusel Y].
    > - 📊 **Resultados:** [si hay datos o conector: una línea con el KPI principal vs. su techo; si no: "Pásame el export de Meta Ads y te digo qué apagar o escalar"].
+   > - 📰 **Headlines:** 2–3 noticias verificadas del sector con medio, fecha y el ángulo para contenido (`03-saludo-headlines.md`).
    > - 💡 **Te recomiendo:** [una sola, la de mayor impacto, con su porqué].
 3. **Menú principal numerado** al final del mismo texto, con la tarea del día primero y "(Recomendado)". No abras una ventana después del resumen, porque lo ocultaría.
 4. Si no hay nada pendiente, propone una acción de 15 minutos que acerque leads (p. ej. "responder comentarios con un CTA a WhatsApp", "idea de carrusel de preguntas frecuentes").

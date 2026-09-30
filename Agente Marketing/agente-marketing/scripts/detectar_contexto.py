@@ -67,6 +67,23 @@ def resumen_ficha(ruta: Path) -> dict:
     }
 
 
+def calcular_fase(marca: dict) -> str:
+    """'activo' si la marca ya tiene contenido creado; si no, 'onboarding'."""
+    estado = marca.get("estado_mark")
+    if estado:
+        texto = leer_texto(Path(estado["ruta"]))
+        m = re.search(r"Fase de Mark:\*{0,2}\s*(activo|onboarding)\b", texto, re.IGNORECASE)
+        if m:
+            return m.group(1).lower()
+    carpeta = Path(marca["carpeta"]) / "entregables"
+    if carpeta.is_dir() and any(p.suffix in (".html", ".png") for p in carpeta.rglob("*")):
+        return "activo"
+    visual = marca.get("sistema_visual")
+    if visual and re.search(r"Kit tipogr[aá]fico:\s*kit_", leer_texto(Path(visual["ruta"])), re.IGNORECASE):
+        return "activo"
+    return "onboarding"
+
+
 def buscar_marcas(raiz: Path) -> list:
     """Cada carpeta que contenga algún archivo de marca cuenta como una marca."""
     carpetas = {}
@@ -83,6 +100,8 @@ def buscar_marcas(raiz: Path) -> list:
             marca[clave] = info_archivo(ruta)
             if clave == "perfil_marca":
                 marca[clave].update(resumen_ficha(ruta))
+    for marca in carpetas.values():
+        marca["fase"] = calcular_fase(marca)
     return sorted(carpetas.values(), key=lambda m: m["carpeta"])
 
 
@@ -99,8 +118,10 @@ def main() -> None:
         siguiente = "Marca nueva: ejecutar rutinas/02-onboarding-unificado.md"
     elif len(marcas) > 1:
         siguiente = "Varias marcas: preguntar con cuál trabajar"
+    elif marcas and marcas[0]["fase"] == "activo":
+        siguiente = "Marca activa: saludo con headlines del día (rutinas/03-saludo-headlines.md)"
     else:
-        siguiente = "Marca conocida: bienvenida corta y menú principal"
+        siguiente = "Marca conocida sin contenido aún: presentación completa y menú"
 
     print(json.dumps(
         {"carpeta": str(raiz), "marcas": marcas, "contexto_producto": contexto, "siguiente_paso": siguiente},

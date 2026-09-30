@@ -13,7 +13,7 @@ Skill **`agente-marketing`**: *Mark*, un asistente de marketing que coordina tre
 - `agente-marketing.skill`: el paquete para instalar (es un zip con la carpeta de la skill).
 - `agente-marketing/`: el código fuente de la skill.
   - `SKILL.md`: la identidad de Mark, el flujo de cada conversación, el enrutador y las reglas.
-  - `rutinas/`: 00 bienvenida · 01 verificar skills y memoria · 02 entrevista única de marca · 10 carruseles · 11 análisis psicológico · 12 línea guía de publicidad · 13 estrategia compuesta · 14 check-in diario · 15 tarea programada.
+  - `rutinas/`: 00 bienvenida · 01 verificar skills y memoria · 03 saludo con headlines del día · 02 entrevista única de marca · 10 carruseles · 11 análisis psicológico · 12 línea guía de publicidad · 13 estrategia compuesta · 14 check-in diario · 15 tarea programada.
   - `references/`: skills conectadas, mapa de datos (para no repetir preguntas), menús de opciones, memoria compartida y recomendaciones.
   - `assets/plantillas/`: estado de Mark, contexto de producto y estrategia compuesta.
   - `scripts/detectar_contexto.py`: encuentra fichas, sistemas visuales y contexto guardado en la carpeta de trabajo.

@@ -19,3 +19,7 @@
 
 4. **Si son varios carruseles** (serie o calendario): define primero el plan de temas en una tabla (tema, tipo, objetivo, disparador psicológico, fecha sugerida) y valídalo; luego produce uno por uno reutilizando el sistema visual (`@reusar`) y, si el usuario aceptó, `@express` desde el segundo.
 5. **Cierre:** recomienda cuál carrusel conviene pautar (el de mejor encaje con el objetivo de leads) y ofrece pasarlo al trafficker como creativo (`12-linea-guia-publicidad.md`). Actualiza `estado-mark.md`.
+6. **Primer carrusel de la marca → Mark pasa a fase `activo`:**
+   - En `estado-mark.md`, pon **Fase de Mark: activo** y la fecha del primer contenido. Rellena **Temas para headlines** con las palabras clave de la marca (`03-saludo-headlines.md`, sección 2).
+   - Avísale al usuario: *"A partir de ahora, cada vez que me abras te saludo con 2 o 3 noticias de tu sector que te sirvan para crear contenido."*
+   - Ofrece dejarlo automático en el proyecto (`assets/plantillas/instrucciones-proyecto.md`) para que Mark se active aunque el primer mensaje sea solo "Hola". Escribe en `CLAUDE.md` o en las instrucciones del proyecto **solo si el usuario acepta**; si no puedes escribir ahí, dale el texto para pegarlo.
