@@ -23,6 +23,7 @@
   --cream-2:   #C7CDC7;
   --accent-br: #5FAE49;
   --line-d:    rgba(242,245,242,.14);
+  --whatsapp:  #25D366;
 
   --sans: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "Red Hat Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -72,7 +73,7 @@ img { height: auto; }
 button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
 a { color: inherit; text-decoration: none; }
 p { text-wrap: pretty; }
-h1, h2, h3, h4 { text-wrap: balance; line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; }
+h1, h2, h3, h4 { text-wrap: balance; line-height: 1.05; letter-spacing: -0.02em; font-weight: 900; }
 ul { list-style: none; padding: 0; }
 ::selection { background: var(--accent); color: var(--cream); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
@@ -99,7 +100,7 @@ ul { list-style: none; padding: 0; }
   margin-bottom: 1rem;
 }
 .kicker-dark { color: var(--accent-br); }
-h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 3.4vw, 2.25rem); }
 h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .section-sub {
   max-width: 46ch;
@@ -131,16 +132,6 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .btn-primary:hover {
   box-shadow: 0 22px 44px rgba(69,134,56,0.32), 0 10px 20px rgba(27,31,39,0.14);
 }
-.btn-ghost {
-  background: transparent; color: var(--ink);
-  box-shadow: inset 0 0 0 1.5px var(--line);
-}
-.btn-ghost:hover { box-shadow: inset 0 0 0 1.5px var(--ink); }
-.btn-outline-light {
-  background: transparent; color: var(--cream);
-  box-shadow: inset 0 0 0 1.5px var(--line-d);
-}
-.btn-outline-light:hover { box-shadow: inset 0 0 0 1.5px var(--cream); }
 .btn-sm { padding: .6rem 1.1rem; font-size: .85rem; }
 .btn-lg { padding: 1.15rem 2rem; font-size: 1.05rem; }
 
@@ -168,13 +159,19 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 }
 .nav.menu-open { background: var(--dbg); }
 .nav.menu-open .nav-burger span { background: var(--cream); }
+
+/* Nav sitting over a dark hero (sub-pages): light text until scrolled */
+.nav.nav-on-dark:not(.is-scrolled) .nav-link { color: var(--cream-2); }
+.nav.nav-on-dark:not(.is-scrolled) .nav-link.is-current { color: var(--cream); }
+.nav.nav-on-dark:not(.is-scrolled) .nav-burger span { background: var(--cream); }
+.nav.nav-on-dark:not(.is-scrolled) .nav-dropdown a { color: var(--ink-soft); }
 .nav-inner { display: flex; align-items: center; gap: 1.5rem; }
 .nav-brand { display: inline-flex; align-items: center; flex-shrink: 0; }
 .nav-logo { height: 34px; width: auto; }
-.nav-links { display: none; gap: 1.6rem; margin-inline: auto; }
-@media (min-width: 960px) { .nav-links { display: flex; } }
+.nav-links { display: none; gap: 1.3rem; margin-inline: auto; }
+@media (min-width: 1280px) { .nav-links { display: flex; } }
 .nav-link {
-  position: relative; padding: .25rem 0; font-weight: 600; font-size: .92rem; color: var(--ink-soft);
+  position: relative; padding: .25rem 0; font-weight: 600; font-size: .88rem; color: var(--ink-soft);
 }
 .nav-link::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -3px;
@@ -183,15 +180,17 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   transition: transform .45s var(--ease-out);
 }
 .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-link.is-current { color: var(--ink); }
+.nav-link.is-current::after { transform: scaleX(1); }
 .nav-cta { display: none; }
 @media (min-width: 720px) { .nav-cta { display: inline-flex; margin-left: auto; } }
-@media (min-width: 960px) { .nav-cta { margin-left: 0; } }
+@media (min-width: 1280px) { .nav-cta { margin-left: 0; } }
 
 .nav-burger {
   display: grid; gap: 5px; width: 34px; height: 30px; margin-left: auto;
   place-content: center; justify-items: center;
 }
-@media (min-width: 960px) { .nav-burger { display: none; } }
+@media (min-width: 1280px) { .nav-burger { display: none; } }
 .nav-burger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .35s var(--ease-out), opacity .3s; }
 .nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -324,6 +323,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 }
 @media (min-width: 720px) { .bento { grid-template-columns: repeat(3, 1fr); } }
 .bento-card {
+  display: block;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -502,6 +502,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .footer-col { display: flex; flex-direction: column; gap: .65rem; }
 .footer-col a { color: var(--cream-2); font-size: .95rem; transition: color .3s; }
 .footer-col a:hover { color: var(--cream); }
+.footer-domain { color: var(--ash); font-size: .85rem; font-family: var(--mono); }
 .footer-bottom { padding-top: 1.6rem; font-size: .82rem; color: var(--ash); }
 
 /* =============================================================
@@ -561,3 +562,173 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 @media (prefers-reduced-motion: reduce) {
   .hero-mesh, .section-mesh::before, .splash-logo { animation: none; }
 }
+
+/* =============================================================
+   19. Shared components — sub-page system (líneas de negocio)
+   ============================================================= */
+
+/* --- Secondary CTA: text-only underline --- */
+.link-arrow {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-weight: 700; text-decoration: underline; text-underline-offset: 3px;
+  color: inherit; transition: gap .3s var(--ease-out), color .3s;
+}
+.link-arrow:hover { gap: .65rem; color: var(--accent); }
+.kicker-dark ~ .link-arrow, .section-dark .link-arrow { color: var(--cream); }
+.section-dark .link-arrow:hover { color: var(--accent-br); }
+
+/* --- Icon atoms (sprite) --- */
+.icon {
+  width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em;
+}
+.icon-circle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  flex-shrink: 0;
+}
+.icon-circle .icon { width: 24px; height: 24px; }
+.section-dark .icon-circle { background: rgba(95,174,73,.16); color: var(--accent-br); }
+
+/* --- Nav dropdown (Electromovilidad ▾) --- */
+.nav-item { position: relative; display: inline-flex; align-items: center; }
+.nav-item > .nav-link { display: inline-flex; align-items: center; gap: .3rem; }
+.nav-item .nav-link .icon { width: 13px; height: 13px; transition: transform .3s var(--ease-out); }
+.nav-dropdown {
+  position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(6px);
+  min-width: 240px; background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); box-shadow: 0 24px 50px -16px rgba(27,31,39,.28);
+  padding: .5rem; opacity: 0; pointer-events: none;
+  transition: opacity .25s var(--ease-out), transform .25s var(--ease-out);
+  z-index: 50;
+}
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown,
+.nav-item.is-open .nav-dropdown {
+  opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+}
+.nav-item:hover .nav-link .icon,
+.nav-item.is-open .nav-link .icon { transform: rotate(180deg); }
+.nav-dropdown a {
+  display: block; padding: .65rem .8rem; border-radius: 8px; font-weight: 600; font-size: .9rem;
+  color: var(--ink-soft); white-space: nowrap;
+}
+.nav-dropdown a:hover { background: var(--bg-2); color: var(--ink); }
+
+/* Mobile: dropdown items just render inline in the fullscreen menu */
+.nav-mobile .nav-sub { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.nav-mobile .nav-sub a { font-size: 1.1rem; font-weight: 600; color: var(--cream-2); }
+
+/* --- Sub-hero (líneas de negocio) --- */
+.subhero {
+  position: relative; background: var(--dbg); color: var(--cream);
+  padding-block: clamp(7rem, 13vw, 9.5rem) var(--space-2xl);
+  overflow: hidden; isolation: isolate;
+}
+.subhero-grid { display: grid; gap: var(--space-xl); align-items: center; }
+@media (min-width: 960px) { .subhero-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+.subhero-title {
+  font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+  max-width: 14ch; color: var(--cream); margin-block: 0 1.1rem;
+}
+.subhero-title em { color: var(--accent-br); font-style: normal; }
+.subhero-sub { color: var(--cream-2); font-size: 1.1rem; max-width: 48ch; margin-bottom: 1.6rem; }
+.subhero-actions { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; }
+.subhero-figure { border-radius: var(--radius); overflow: hidden; box-shadow: 0 40px 90px -30px rgba(0,0,0,.6); }
+.subhero-figure img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 8/5; }
+
+/* --- Context block (02) --- */
+.context-block { max-width: 62ch; }
+.context-block h2 { margin-bottom: .9rem; }
+.context-block p { color: var(--ink-mute); font-size: 1.05rem; }
+
+/* --- Feature cards (03) --- */
+.feature-grid { display: grid; gap: 1.1rem; }
+@media (min-width: 640px) { .feature-grid.cols-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 720px) { .feature-grid.cols-3 { grid-template-columns: repeat(3, 1fr); } }
+.feature-card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 1.7rem; display: flex; flex-direction: column; gap: .9rem;
+  transition: transform .5s var(--ease-soft), box-shadow .4s;
+}
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 24px 50px -24px rgba(27,31,39,.22); }
+.feature-card.is-recommended { border-color: var(--accent); box-shadow: 0 0 0 1.5px var(--accent) inset; }
+.feature-card-tag {
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent-2); font-weight: 700;
+}
+.feature-card h3 { font-size: 1.1rem; }
+.feature-card p { color: var(--ink-mute); font-size: .95rem; }
+
+/* Electromovilidad hub cards (link to child pages, use real icon images) */
+.hub-card { display: flex; flex-direction: column; gap: .8rem; text-align: left; }
+.hub-card img { width: 56px; height: 56px; object-fit: contain; }
+
+/* --- Cross-sell section (04) — full-bleed forest band --- */
+.section-forest { background: var(--accent-2); color: var(--cream); }
+.crosssell {
+  display: flex; flex-direction: column; gap: .6rem; align-items: flex-start;
+  max-width: 64ch;
+}
+.crosssell .kicker { color: var(--accent-br); margin-bottom: .2rem; }
+.crosssell h2 { color: var(--cream); }
+.crosssell p { color: var(--cream-2); max-width: 52ch; }
+.crosssell .link-arrow { color: var(--cream); margin-top: .4rem; }
+.crosssell .link-arrow:hover { color: var(--accent-br); }
+
+/* --- Para quién (05) --- */
+.who-grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .who-grid { grid-template-columns: repeat(3, 1fr); } }
+.who-card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+.who-card h3 { font-size: 1.02rem; margin-bottom: .5rem; }
+.who-card p { color: var(--ink-mute); font-size: .92rem; }
+
+/* --- Cómo funciona (06) steps, on dark navy --- */
+.steps-grid { display: grid; gap: 1.3rem; }
+@media (min-width: 640px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .steps-grid { grid-template-columns: repeat(4, 1fr); } }
+.step-card { display: flex; flex-direction: column; gap: .5rem; }
+.step-num {
+  font-family: var(--mono); font-weight: 700; font-size: .85rem; color: var(--accent-br);
+}
+.step-card h3 { color: var(--cream); font-size: 1.02rem; }
+.step-card p { color: var(--cream-2); font-size: .92rem; }
+
+/* --- FAQ accordion (07) — native <details>/<summary>, no JS required --- */
+.faq-list { display: flex; flex-direction: column; gap: .7rem; max-width: 72ch; }
+.faq-item { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; }
+.faq-q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.3rem; font-weight: 700; font-size: 1rem; cursor: pointer;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q .icon { width: 18px; height: 18px; flex-shrink: 0; transition: transform .35s var(--ease-out); color: var(--accent); }
+.faq-item[open] .faq-q .icon { transform: rotate(135deg); }
+.faq-a p { padding: 0 1.3rem 1.2rem; color: var(--ink-mute); font-size: .96rem; }
+
+/* --- Final CTA phone readout --- */
+.cta-phone {
+  font-family: var(--mono); font-weight: 700; font-size: 1.1rem; color: var(--accent-br);
+  letter-spacing: .02em;
+}
+
+/* --- Floating WhatsApp button (FAB) --- */
+.fab-whatsapp {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 300;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--whatsapp); color: #fff;
+  display: grid; place-items: center;
+  box-shadow: 0 14px 30px -8px rgba(37,211,102,.55), 0 4px 10px rgba(0,0,0,.2);
+  transition: transform .4s var(--ease-soft), box-shadow .4s;
+}
+.fab-whatsapp:hover { transform: translateY(-4px) scale(1.05); }
+.fab-whatsapp .icon { width: 30px; height: 30px; }
+@media (min-width: 720px) { .fab-whatsapp { right: 2rem; bottom: 2rem; } }
+
+/* --- Breadcrumb-ish solution tag in nav-cta (Visita gratis) --- */
+.nav-cta .icon { width: 17px; height: 17px; }
+

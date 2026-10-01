@@ -8,15 +8,15 @@
 <meta name="description" content="reGEN Systems, la marca de energía sostenible de Grupo Miral: proyectos llave en mano de energía solar, carports solares, respaldo con baterías LiFePO4, electromovilidad e infraestructura de carga AC/DC en todo Ecuador.">
 <meta name="theme-color" content="#1B1F27">
 
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=20260831">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20260831">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=20261001">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=20261001">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Red+Hat+Mono:wght@400;500;600&display=swap">
 
 <link rel="preload" as="image" href="assets/img/hero-carport-flota.webp" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20260831">
+<link rel="stylesheet" href="styles.css?v=20261001">
 
 <meta property="og:title" content="reGEN Systems — Independencia energética para Ecuador">
 <meta property="og:description" content="Energía solar, respaldo LiFePO4, carports solares y electromovilidad. Un solo proveedor, llave en mano.">
@@ -41,21 +41,29 @@
 <!-- ================= NAV ================= -->
 <header class="nav" data-nav>
   <div class="nav-inner container">
-    <a href="#top" class="nav-brand" aria-label="reGEN Systems — Inicio">
+    <a href="index.html" class="nav-brand" aria-label="reGEN Systems — Inicio">
       <img src="assets/img/logo-regen-lockup.webp" alt="reGEN Systems · Integrated Sustainable Solutions" class="nav-logo">
     </a>
     <nav class="nav-links" aria-label="Navegación principal">
-      <a class="nav-link" href="#ecosistema">Ecosistema</a>
-      <a class="nav-link" href="#soluciones">Soluciones</a>
-      <a class="nav-link" href="#contexto">Contexto EC</a>
-      <a class="nav-link" href="#bondades">Por qué reGEN</a>
-      <a class="nav-link" href="#casos">Casos de uso</a>
-      <a class="nav-link" href="#contacto">Contacto</a>
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="respaldo-de-energia.html">Respaldo de energía</a>
+      <a class="nav-link" href="proyectos-solares.html">Proyectos solares</a>
+      <a class="nav-link" href="carports-solares.html">Carports solares</a>
+      <div class="nav-item has-dropdown">
+        <a class="nav-link" href="electromovilidad.html">Electromovilidad <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-chevron"></use></svg></a>
+        <div class="nav-dropdown">
+          <a href="electromovilidad.html">Ver ecosistema completo</a>
+          <a href="infraestructura-de-carga.html">Infraestructura de carga</a>
+          <a href="vehiculos-electricos.html">Vehículos eléctricos</a>
+        </div>
+      </div>
+      <a class="nav-link" href="#nosotros">Nosotros</a>
     </nav>
     <a class="btn btn-primary btn-sm nav-cta" data-magnetic data-magnetic-strength="0.25"
-       href="https://wa.me/593985328573?text=Hola%20reGEN%20Systems%2C%20quiero%20informaci%C3%B3n%20sobre%20soluciones%20de%20energ%C3%ADa"
+       href="https://wa.me/593985328573?text=Hola%2C%20quiero%20agendar%20una%20visita%20t%C3%A9cnica%20gratis."
        target="_blank" rel="noopener">
-      <span>WhatsApp 💬</span>
+      <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-whatsapp"></use></svg>
+      <span>Visita gratis</span>
     </a>
     <button class="nav-burger" data-nav-burger aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
       <span></span><span></span><span></span>
@@ -64,13 +72,17 @@
 </header>
 
 <nav class="nav-mobile" id="nav-mobile" data-nav-mobile aria-hidden="true" aria-label="Navegación móvil">
-  <a href="#ecosistema">Ecosistema</a>
-  <a href="#soluciones">Soluciones</a>
-  <a href="#contexto">Contexto EC</a>
-  <a href="#bondades">Por qué reGEN</a>
-  <a href="#casos">Casos de uso</a>
-  <a href="#contacto">Contacto</a>
-  <a class="btn btn-primary" href="https://wa.me/593985328573" target="_blank" rel="noopener">Habla con un asesor</a>
+  <a href="index.html">Inicio</a>
+  <a href="respaldo-de-energia.html">Respaldo de energía</a>
+  <a href="proyectos-solares.html">Proyectos solares</a>
+  <a href="carports-solares.html">Carports solares</a>
+  <a href="electromovilidad.html">Electromovilidad</a>
+  <div class="nav-sub">
+    <a href="infraestructura-de-carga.html">↳ Infraestructura de carga</a>
+    <a href="vehiculos-electricos.html">↳ Vehículos eléctricos</a>
+  </div>
+  <a href="#nosotros">Nosotros</a>
+  <a class="btn btn-primary" href="https://wa.me/593985328573?text=Hola%2C%20quiero%20agendar%20una%20visita%20t%C3%A9cnica%20gratis." target="_blank" rel="noopener">Agenda tu visita técnica gratis</a>
 </nav>
 
 <main id="main">
@@ -85,9 +97,9 @@
         <p class="hero-sub" data-reveal>Diseñamos e implementamos proyectos llave en mano que integran generación solar fotovoltaica, respaldo con baterías LiFePO4, carports solares e infraestructura de carga para vehículos eléctricos. Un solo responsable, de principio a fin.</p>
         <div class="hero-actions" data-reveal>
           <a class="btn btn-primary" data-magnetic data-magnetic-strength="0.3"
-             href="https://wa.me/593985328573?text=Hola%20reGEN%20Systems%2C%20quiero%20informaci%C3%B3n%20sobre%20soluciones%20de%20energ%C3%ADa"
-             target="_blank" rel="noopener">Habla con un asesor 💬</a>
-          <a class="btn btn-ghost" href="#ecosistema">Ver el ecosistema ↓</a>
+             href="https://wa.me/593985328573?text=Hola%2C%20quiero%20agendar%20una%20visita%20t%C3%A9cnica%20gratis."
+             target="_blank" rel="noopener">Agenda tu visita técnica gratis</a>
+          <a class="link-arrow" href="#ecosistema">Ver el ecosistema ↓</a>
         </div>
       </div>
       <figure class="hero-figure" data-reveal>
@@ -153,24 +165,24 @@
         <p class="section-sub" data-reveal>Desde el diseño técnico hasta la puesta en marcha: ingeniería, importación, instalación, legalización y soporte, todo bajo una misma marca.</p>
       </div>
       <div class="bento" data-reveal>
-        <article class="bento-card">
+        <a class="bento-card" href="proyectos-solares.html">
           <img src="assets/img/icon-diseno-solar.webp" alt="Diseño de proyectos solares" loading="lazy" decoding="async">
-        </article>
-        <article class="bento-card">
+        </a>
+        <a class="bento-card" href="respaldo-de-energia.html">
           <img src="assets/img/icon-respaldo-energia.webp" alt="Sistema de respaldo de energía" loading="lazy" decoding="async">
-        </article>
-        <article class="bento-card">
+        </a>
+        <a class="bento-card" href="carports-solares.html">
           <img src="assets/img/icon-carports-solares.webp" alt="Carports solares" loading="lazy" decoding="async">
-        </article>
-        <article class="bento-card">
+        </a>
+        <a class="bento-card" href="electromovilidad.html">
           <img src="assets/img/icon-electromovilidad.webp" alt="Electromovilidad" loading="lazy" decoding="async">
-        </article>
-        <article class="bento-card">
+        </a>
+        <a class="bento-card" href="infraestructura-de-carga.html">
           <img src="assets/img/icon-infraestructura-carga.webp" alt="Infraestructura de carga" loading="lazy" decoding="async">
-        </article>
-        <article class="bento-card">
+        </a>
+        <a class="bento-card" href="vehiculos-electricos.html">
           <img src="assets/img/icon-vehiculos-electricos.webp" alt="Vehículos eléctricos" loading="lazy" decoding="async">
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -201,6 +213,10 @@
               <img src="assets/img/carport-vistas-tecnicas.webp" alt="Vista frontal, lateral y detalle de unión del carport solar" loading="lazy">
               <img src="assets/img/carport-solar-flota.webp" alt="Sistema solar y carga integrado para flota de vehículos" loading="lazy">
             </div>
+            <div class="hero-actions">
+              <a class="link-arrow" href="proyectos-solares.html">Ver proyectos solares →</a>
+              <a class="link-arrow" href="carports-solares.html">Ver carports solares →</a>
+            </div>
           </div>
         </article>
 
@@ -222,6 +238,7 @@
               <img src="assets/img/bateria-lifepo4-must.webp" alt="Batería LiFePO4 MUST" loading="lazy">
               <img src="assets/img/bateria-monitor-must.webp" alt="Batería con monitor de carga MUST" loading="lazy">
             </div>
+            <a class="link-arrow" href="respaldo-de-energia.html">Ver respaldo de energía →</a>
           </div>
         </article>
 
@@ -242,6 +259,7 @@
               <img src="assets/img/cargadores-portatiles-regen.webp" alt="Cargadores portátiles reGEN EV Charger" loading="lazy">
               <img src="assets/img/cargador-dc-poste.webp" alt="Poste de carga DC rápida reGEN Systems" loading="lazy">
             </div>
+            <a class="link-arrow" href="electromovilidad.html">Ver electromovilidad →</a>
           </div>
         </article>
 
@@ -257,7 +275,7 @@
         <h2 class="dark-heading" data-reveal>La red pública ya no es suficiente.</h2>
         <p class="dark-lead" data-reveal>La inestabilidad de la red eléctrica en el Ecuador —con cortes de luz prolongados y variaciones de suministro— ha convertido la autonomía energética en una necesidad operativa y financiera, no solo en una decisión ambiental.</p>
         <p class="dark-body" data-reveal>Durante 2026 se han registrado cortes de hasta 15 horas en zonas como Guayaquil, Daule y Samborondón, y de hasta 6 horas en Quito y sus valles. El sistema opera con un margen reducido: cada empresa y cada hogar necesita un plan propio de respaldo, no solo esperar a que la red mejore.</p>
-        <a class="btn btn-outline-light" data-magnetic data-magnetic-strength="0.25" href="#soluciones">Conoce el respaldo con baterías LiFePO4 →</a>
+        <a class="link-arrow" data-magnetic data-magnetic-strength="0.25" href="respaldo-de-energia.html">Conoce el respaldo con baterías LiFePO4 →</a>
       </div>
       <figure class="context-figure" data-reveal>
         <img src="assets/img/equipos-respaldo-hero.webp" alt="Inversor híbrido y batería LiFePO4 de respaldo energético reGEN Systems" loading="lazy" decoding="async">
@@ -372,9 +390,9 @@
       <p class="dark-lead" data-reveal>Cuéntanos si buscas energía solar, respaldo con baterías, carports o infraestructura de carga. Un asesor de reGEN Systems te responde directo por WhatsApp.</p>
       <div class="hero-actions" data-reveal>
         <a class="btn btn-primary btn-lg" data-magnetic data-magnetic-strength="0.3"
-           href="https://wa.me/593985328573?text=Hola%20reGEN%20Systems%2C%20quiero%20informaci%C3%B3n%20sobre%20soluciones%20de%20energ%C3%ADa"
-           target="_blank" rel="noopener">Escríbenos por WhatsApp 💬</a>
-        <a class="btn btn-outline-light" href="mailto:regen-systems@meridian-builders.com">regen-systems@meridian-builders.com</a>
+           href="https://wa.me/593985328573?text=Hola%2C%20quiero%20agendar%20una%20visita%20t%C3%A9cnica%20gratis."
+           target="_blank" rel="noopener">Agenda tu visita técnica gratis</a>
+        <a class="link-arrow" href="mailto:regen-systems@meridian-builders.com">regen-systems@meridian-builders.com</a>
       </div>
     </div>
   </section>
@@ -391,29 +409,33 @@
       <p class="footer-parent">Una marca de <strong>Grupo Miral</strong> ♻️</p>
     </div>
     <div class="footer-col">
-      <h5>Navegación</h5>
-      <a href="#ecosistema">Ecosistema</a>
-      <a href="#soluciones">Soluciones</a>
-      <a href="#contexto">Contexto EC</a>
-      <a href="#bondades">Por qué reGEN</a>
-      <a href="#casos">Casos de uso</a>
+      <h5>Soluciones</h5>
+      <a href="respaldo-de-energia.html">Respaldo de energía</a>
+      <a href="proyectos-solares.html">Proyectos solares</a>
+      <a href="carports-solares.html">Carports solares</a>
+      <a href="electromovilidad.html">Electromovilidad</a>
     </div>
     <div class="footer-col">
       <h5>Contacto</h5>
-      <a href="https://wa.me/593985328573" target="_blank" rel="noopener">WhatsApp +593 98 532 8573</a>
-      <a href="mailto:regen-systems@meridian-builders.com">regen-systems@meridian-builders.com</a>
-      <a href="https://instagram.com/regen.systems" target="_blank" rel="noopener">Instagram @regen.systems</a>
-      <a href="https://tiktok.com/@regensystemsec" target="_blank" rel="noopener">TikTok @regensystemsec</a>
+      <a href="https://wa.me/593985328573" target="_blank" rel="noopener">+593 98 532 8573</a>
+      <a href="https://instagram.com/regensystems.ec" target="_blank" rel="noopener">Instagram · regensystems.ec</a>
+      <a href="https://tiktok.com/@regen.systems" target="_blank" rel="noopener">TikTok · @regen.systems</a>
+      <a href="https://facebook.com/RegenSystems" target="_blank" rel="noopener">Facebook · Regen Systems</a>
+      <span class="footer-domain">regensystemsec.com</span>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© <span data-year">2026</span> reGEN Systems — Integrated Sustainable Solutions. Todos los derechos reservados.</p>
+    <p>© <span data-year>2026</span> reGEN Systems — Integrated Sustainable Solutions. Todos los derechos reservados.</p>
   </div>
 </footer>
+
+<a class="fab-whatsapp" href="https://wa.me/593985328573?text=Hola%2C%20quiero%20agendar%20una%20visita%20t%C3%A9cnica%20gratis." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#icon-whatsapp"></use></svg>
+</a>
 
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
 <script defer src="lib/manifest.js"></script>
-<script defer src="main.js?v=20260831"></script>
+<script defer src="main.js?v=20261001"></script>
 </body>
 </html>

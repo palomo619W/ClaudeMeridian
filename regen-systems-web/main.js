@@ -47,6 +47,31 @@
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
   }
 
+  /* ---------- Nav dropdown (Electromovilidad ▾) — tap toggle for touch ---------- */
+  function initNavDropdown() {
+    var items = $$(".nav-item.has-dropdown");
+    if (!items.length) return;
+    var hasHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (hasHover) return; // desktop: CSS :hover already reveals the panel
+    items.forEach(function (item) {
+      var trigger = $(".nav-link", item);
+      if (!trigger) return;
+      trigger.addEventListener("click", function (e) {
+        var willOpen = !item.classList.contains("is-open");
+        items.forEach(function (i) { i.classList.remove("is-open"); });
+        if (willOpen) {
+          e.preventDefault();
+          item.classList.add("is-open");
+        }
+      });
+    });
+    document.addEventListener("click", function (e) {
+      items.forEach(function (item) {
+        if (!item.contains(e.target)) item.classList.remove("is-open");
+      });
+    });
+  }
+
   /* ---------- Smooth anchor scroll (native) ---------- */
   function initSmoothAnchors() {
     document.addEventListener("click", function (e) {
@@ -239,6 +264,7 @@
   function boot() {
     safe(initSplash, "initSplash");
     safe(initNav, "initNav");
+    safe(initNavDropdown, "initNavDropdown");
     safe(initSmoothAnchors, "initSmoothAnchors");
     safe(initReveals, "initReveals");
     safe(initTilt, "initTilt");
